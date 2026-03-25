@@ -138,6 +138,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fishButtonScript: {fileID: 0}
+  _fishMovement: {fileID: 7730745604981814949}
+  startPoint: {fileID: 0}
+  targetPoint: {fileID: 0}
+  duration: 1.5
+  height: 0.5
+  _jump: 0
+  _waterEffect: {fileID: 0}
 --- !u!1001 &4925728064191212424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,8 +212,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 290e95b7dfbd2794f839bad64d3bed69, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3708771219693208856}
   m_SourcePrefab: {fileID: -4161369568681901532, guid: 290e95b7dfbd2794f839bad64d3bed69, type: 3}
+--- !u!1 &1751499800989112438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6635245195314443262, guid: 290e95b7dfbd2794f839bad64d3bed69, type: 3}
+  m_PrefabInstance: {fileID: 4925728064191212424}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3708771219693208856
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751499800989112438}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21b4a4ccc807b7e4abc38a9863006d67, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &7374233246910337388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6769691430286951708, guid: 290e95b7dfbd2794f839bad64d3bed69, type: 3}

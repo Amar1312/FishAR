@@ -65,46 +65,20 @@ public class MyProfilePanel : MonoBehaviour
     void SetLevelData()
     {
         int colloctData = PointManager.Instance._unLockFishID.Count;
-        int num = 0;
-        int Level = 0;
+        int num;
+        int Level;
 
-        if (colloctData <= 5)
-        {
-            num = colloctData;
-            Level = 1;
-        }
-        else if (colloctData <= 10)
-        {
-            num = colloctData - 5;
-            Level = 2;
-        }
-        else if (colloctData <= 15)
-        {
-            num = colloctData - 10;
-            Level = 3;
-        }
-        else if (colloctData <= 20)
-        {
-            num = colloctData - 15;
-            Level = 4;
-        }
-        else if (colloctData <= 25)
-        {
-            num = colloctData - 20;
-            Level = 5;
-        }
-        else if (colloctData <= 30)
-        {
-            num = colloctData - 25;
-            Level = 6;
-        }
+        int groupSize = 5;
+
+        Level = (colloctData - 1) / groupSize + 1;
+        num = (colloctData - 1) % groupSize + 1;
 
         _levelExplorerText.text = "Level " + Level.ToString() + " Explorer";
         _mainLevelText.text = "Level " + Level.ToString();
 
-        _fishCollectText.text = num.ToString() + " / " + "5" + " Fish Collected";
+        _fishCollectText.text = num.ToString() + " / " + groupSize.ToString() + " Fish Collected";
 
-        float Data = (float)num / 5;
+        float Data = (float)num / groupSize;
         _collectScrollbar.size = Data;
         float per = Data * 100;
         string result = per.ToString("F1");

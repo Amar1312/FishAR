@@ -138,6 +138,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fishButtonScript: {fileID: 0}
+  _fishMovement: {fileID: 2952497072623081842}
+  startPoint: {fileID: 0}
+  targetPoint: {fileID: 0}
+  duration: 1.5
+  height: 0.5
+  _jump: 0
 --- !u!1001 &1018778389945321908
 PrefabInstance:
   m_ObjectHideFlags: 0

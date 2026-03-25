@@ -4396,7 +4396,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: F Gold Series
+  m_text: Favorite Gold Series
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8adfbfea3f7a64b40abfd37b88ce31d5, type: 2}
   m_sharedMaterial: {fileID: -3977771094409496905, guid: 8adfbfea3f7a64b40abfd37b88ce31d5, type: 2}
