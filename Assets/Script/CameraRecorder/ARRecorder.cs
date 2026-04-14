@@ -16,7 +16,7 @@ public class ARRecorder : MonoBehaviour
     private CameraInput cameraInput;
     private string lastVideoPath;
     //public VideoPlayerManager _VideoPlayerManager;
-    public GameObject VideoMessage;
+    public GameObject VideoMessage,_coinAnimation,logoParent,logodisable;
 
 
     public void StartRecording()
@@ -56,15 +56,21 @@ public class ARRecorder : MonoBehaviour
             "ScreenRecord_" + Application.productName + Random.Range(1000, 10000));
 
         //BehaviousController.Instance.Recording = false;
-        VideoMessage.SetActive(true);
-        Invoke(nameof(OffVideoMessage), 1.25f);
+        // VideoMessage.SetActive(true);
+        logoParent.SetActive(true);
+        logodisable.SetActive(false);
+        _coinAnimation.SetActive(true);
+        Invoke(nameof(OffVideoMessage), 3.1f);
         //_VideoPlayerManager.VideoPath = lastVideoPath;
         //VideoRecordingDone.Invoke();
     }
 
     void OffVideoMessage()
     {
-        VideoMessage.SetActive(false);
+        //VideoMessage.SetActive(false);
+        _coinAnimation.SetActive(false);
+        logoParent.SetActive(false);
+        logodisable.SetActive(true);
     }
     
     //public UnityEvent VideoRecordingDone;

@@ -11,6 +11,7 @@ public class UIManager : Singleton<UIManager>
     public GamePanel _gameScript;
     public UnlockPopupPanel _unlockPopupScript;
     public List<GameObject> _gamePanel;
+    public List<GameObject> _selectedFish;
 
     [Space]
     [Header("Spawn")]
@@ -36,7 +37,37 @@ public class UIManager : Singleton<UIManager>
         DisplayPoint();
         CheckAllFishLock();
     }
+    void Update()
+    {
+        //if (Input.touchCount > 0)
+        //{
+        //    Touch touch = Input.GetTouch(0);
 
+        //    if (touch.phase == TouchPhase.Began)
+        //    {
+        //        Ray ray = Camera.main.ScreenPointToRay(touch.position);
+        //        RaycastHit hit;
+
+        //        if (Physics.Raycast(ray, out hit))
+        //        {
+        //            Debug.Log("Hit: " + hit.collider.gameObject.name);
+        //            _selectedFish.Add(hit.collider.gameObject);
+
+        //        }
+        //    }
+        //}
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                Debug.Log("Hit: " + hit.collider.gameObject.name);
+                _selectedFish.Add(hit.collider.gameObject);
+            }
+        }
+
+    }
     public void DisplayPoint()
     {
         _pointText.text = PointManager.Instance._point.ToString();
@@ -62,5 +93,10 @@ public class UIManager : Singleton<UIManager>
         {
             _gamePanel[i].SetActive(status);
         }
+    }
+
+public void OnFishSelected()
+    {
+
     }
 }

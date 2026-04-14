@@ -13,9 +13,16 @@ public class CoinAnimation : MonoBehaviour
     [SerializeField] private int coinsAmount;
     //UiPanelManager _uiManager;
     [SerializeField] bool _islocalmove;
+    public GameObject _dailyPopUpPanel;
 
     void Start()
     {
+
+    }
+
+    private void OnEnable()
+    {
+        _dailyPopUpPanel.SetActive(true);
         if (coinsAmount >= transform.childCount)
         {
             coinsAmount = transform.childCount;
@@ -30,11 +37,6 @@ public class CoinAnimation : MonoBehaviour
             initialRotation[i] = transform.GetChild(i).GetComponent<RectTransform>().rotation;
         }
         CountCoins();
-    }
-
-    private void OnEnable()
-    {
-
     }
 
 
@@ -80,10 +82,13 @@ public class CoinAnimation : MonoBehaviour
     void CoinResetPostion()
     {
         //_uiManager.UpdateScore();
+       
         for (int i = 0; i < _coins.Length; i++)
         {
             _coins[i].GetComponent<RectTransform>().anchoredPosition = initialPos[i];
         }
+        gameObject.SetActive(false);
+        _dailyPopUpPanel.SetActive(false);
     }
 
 

@@ -10,7 +10,7 @@ namespace Amar
 {
     public class TakePicture : MonoBehaviour
     {
-        public GameObject Screeshot,_logoPanel;
+        public GameObject Screeshot,_logoPanel,_coinAnimation;
         public Image _logoImage;
         public RawImage _image;
         public List<GameObject> _DeactiveCanvas;
@@ -67,6 +67,7 @@ namespace Amar
             ss.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
             ss.Apply();
             _image.texture = ss;
+            _coinAnimation.SetActive(true);
 
             StartCoroutine(IenumStartScreenshot());
             NativeGallery.SaveImageToGallery(ss, "Toll", "Toll.png");
@@ -84,11 +85,12 @@ namespace Amar
 
         IEnumerator IenumStartScreenshot()
         {
-
+            
             Screeshot.SetActive(true);
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(4.0f);
             Screeshot.SetActive(false);
             _logoPanel.SetActive(false);
+            
             for (int i = 0; i < _DeactiveCanvas.Count; i++)
             {
                 _DeactiveCanvas[i].SetActive(true);
