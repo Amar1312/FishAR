@@ -26,12 +26,12 @@ public class UIManager : Singleton<UIManager>
             FishComponent fishCom = Instantiate(_fishComponentPrefab, _gamePanelContainer);
             fishCom._fishDetail = _dataManager._fishData[i].fishData;
             fishCom._fishID = _dataManager._fishData[i].fishID;
-            fishCom._fishUnlockPoint = _dataManager._fishData[i]._fishUnlockPoint;
+            // Use fishUnlockCost so the cost is never overwritten by the runtime unlock flag
+            fishCom._fishUnlockPoint = _dataManager._fishData[i].fishUnlockCost;
             fishCom._placeModel = _dataManager._fishData[i]._placeFishPrefab;
 
             _allPointFish.Add(fishCom);
         }
-
 
         DisplayPoint();
         CheckAllFishLock();

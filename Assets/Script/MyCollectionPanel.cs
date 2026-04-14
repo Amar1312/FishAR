@@ -17,10 +17,11 @@ public class MyCollectionPanel : MonoBehaviour
     public TextMeshProUGUI _totalText;
     public TextMeshProUGUI _levelText;
     public TextMeshProUGUI _levelPerText;
+    
 
     private void OnEnable()
     {
-        CheckCollectedFish();
+   
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +34,10 @@ public class MyCollectionPanel : MonoBehaviour
         _allBtn.onClick.AddListener(AllBtnClick);
         _saltwaterBtn.onClick.AddListener(SaltwaterBtnClick);
         _freshwaterBtn.onClick.AddListener(FreshwaterBtnClick);
+
+
+        CheckCollectedFish();
+
 
     }
 
@@ -103,11 +108,12 @@ public class MyCollectionPanel : MonoBehaviour
 
     void CheckCollectedFish()
     {
-        PointManager _pointManager = PointManager.Instance;
+        UserData user = UserSaveManager.Load();
+
         _collectedFish.Clear();
         for (int i = 0; i < _allFishComponent.Count; i++)
         {
-            if (_pointManager._unLockFishID.Contains(_allFishComponent[i]._fishId))
+            if (user.fishFullSaveData.unlockedFishIDs.Contains(_allFishComponent[i]._fishId))
             {
                 _collectedFish.Add(_allFishComponent[i]);
                 _allFishComponent[i].gameObject.SetActive(true);
@@ -117,36 +123,45 @@ public class MyCollectionPanel : MonoBehaviour
                 _allFishComponent[i].gameObject.SetActive(false);
             }
         }
-        float Data = (float)_collectedFish.Count / _allFishComponent.Count;
-        float per = Data * 100;
+
+        float data = _allFishComponent.Count > 0
+            ? (float)_collectedFish.Count / _allFishComponent.Count
+            : 0f;
+        float per = data * 100f;
         string result = per.ToString("F1");
         _totalText.text = result + " %";
-        //_collectScrollbar.size = Data;
-        //_collectText.text = _collectedFish.Count.ToString() + " / " + _allFishComponent.Count.ToString() + " Fish Collected";
+
+        // Fixed: was int.Parse which crashes on decimal strings like "62.5"
+        user.progressPercent = float.Parse(result, System.Globalization.CultureInfo.InvariantCulture);
+
+        UserSaveManager.Save(user);
+       // DataContainerManager.Instance.SaveAllData();
+
         SetLevelData();
     }
 
     void SetLevelData()
     {
-        int colloctData = _collectedFish.Count;
-        int num;
-        int Level;
+        int collectedCount = _collectedFish.Count;
+        const int groupSize = 5;
 
-        int groupSize = 5;
+        // Guard against zero collected fish to avoid negative level/num
+        int level = collectedCount == 0 ? 1 : (collectedCount - 1) / groupSize + 1;
+        int num   = collectedCount == 0 ? 0 : (collectedCount - 1) % groupSize + 1;
 
-        Level = (colloctData - 1) / groupSize + 1;
-        num = (colloctData - 1) % groupSize + 1;
+        _levelText.text = "Level " + level + " Explorer";
+        _collectText.text = num + " / " + groupSize + " Fish Collected";
 
-        _levelText.text = "Level " + Level.ToString() + " Explorer";
+        float data = (float)num / groupSize;
+        _collectScrollbar.size = data;
+        _levelPerText.text = "Level " + level + " at " + (data * 100f).ToString("F1") + " %";
 
-        _collectText.text = num.ToString() + " / " + groupSize.ToString() + " Fish Collected";
+        UserData user = UserSaveManager.Load();
+        user.level = level;
+        UserSaveManager.Save(user);
 
-        float Data = (float)num / groupSize;
-        _collectScrollbar.size = Data;
-        float per = Data * 100;
-        string result = per.ToString("F1");
+        //DataContainerManager.Instance.SaveAllData();
 
-        _levelPerText.text = "Level " + Level.ToString() + " at " + result + " %";
         AllBtnClick();
     }
 }

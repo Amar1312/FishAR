@@ -26,7 +26,7 @@ public class Result
     public string logo;
     public string description;
     public Distributor distributor;
-}
+} 
 
 [Serializable]
 public class ShopOwnerResponce
@@ -38,11 +38,22 @@ public class ShopOwnerResponce
 
 [Serializable]
 
+#endregion
+
+#region FishAndUser
+
 public class FishAllDetail
 {
     public bool fevarit;
     public tagType tag;
     public string fishName;
+    public string fishDetail;
+    public string funFact;
+    public string availability;
+    public string fishType;
+    public string fishoptimalTemperature;
+    public string canfishSurviveIn;
+    public string fishMaxSize;
     public CategoryType category;
     public Sprite fishImage;
 }
@@ -61,8 +72,31 @@ public class FishSpawnData
 {
     public FishAllDetail fishData;
     public int fishID;
-    public int _fishUnlockPoint;
+    /// <summary>Cost in points required to unlock this fish. Set in Inspector — never overwritten at runtime.</summary>
+    public int fishUnlockCost;
     public GameObject _placeFishPrefab;
 }
 
+[Serializable]
+public class FishFullSaveData
+{
+    public List<int> unlockedFishIDs = new List<int>();
+    public List<int> favoriteFishIDs = new List<int>();
+}
+
+[Serializable]
+public class UserData
+{
+    public string userName;
+
+    public int level;
+    public float progressPercent;
+
+    public int totalFishCollected;
+
+    public int points;
+    public string title;
+
+    public FishFullSaveData fishFullSaveData = new FishFullSaveData();
+}
 #endregion

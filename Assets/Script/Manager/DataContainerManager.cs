@@ -6,15 +6,22 @@ public class DataContainerManager : Singleton<DataContainerManager>
 {
     public List<FishSpawnData> _fishData;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //FishSaveManager.Load(_fishData);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    /// <summary>Returns the fish entry matching the given ID, or null if not found.</summary>
+    //public FishSpawnData GetFishByID(int id)
+    //{
+    //    return _fishData.Find(f => f.fishID == id);
+    //}
+
+    /// <summary>Persists all fish unlock and favourite states.</summary>
+    //    public void SaveAllData()
+    //    {
+    //        //FishSaveManager.Save(_fishData);
+    //        Debug.Log("All Fish Data Saved");
+    //    }
+
 }

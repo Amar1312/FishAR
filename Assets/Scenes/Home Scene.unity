@@ -151,6 +151,7 @@ Transform:
   - {fileID: 736130321}
   - {fileID: 9060545}
   - {fileID: 5750017}
+  - {fileID: 341038304}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5750016
@@ -349,7 +350,7 @@ MonoBehaviour:
   _profileScript: {fileID: 606533034}
   _dailyPoint: 100
   _dailyPopup: {fileID: 392889774}
-  _coinAnimationPanel: {fileID: 810447118}
+  _coinAnimationPanel: {fileID: 1400540426582388809}
   _dailyMessage: {fileID: 12683990}
   _dailyClip: {fileID: 8300000, guid: aa680cde52682d142b357bcff463b556, type: 3}
   _fishSearch: {fileID: 1259148623}
@@ -985,6 +986,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &59750012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 59750013}
+  - component: {fileID: 59750015}
+  - component: {fileID: 59750014}
+  m_Layer: 5
+  m_Name: LoadingPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &59750013
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59750012}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 165825309}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 828, y: 552}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &59750014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59750012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 58fb5a56692c1404d9ca638a473e57ae, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &59750015
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59750012}
+  m_CullTransparentMesh: 1
 --- !u!1 &72547938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,6 +2277,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152511223}
+  m_CullTransparentMesh: 1
+--- !u!1 &165825308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 165825309}
+  - component: {fileID: 165825311}
+  - component: {fileID: 165825310}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &165825309
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165825308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 59750013}
+  m_Father: {fileID: 1267246963}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &165825310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165825308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &165825311
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165825308}
   m_CullTransparentMesh: 1
 --- !u!1 &168301182
 GameObject:
@@ -3574,6 +3726,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: 
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 0}
   _fishImage: {fileID: 0}
@@ -3694,96 +3853,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273150006}
-  m_CullTransparentMesh: 1
---- !u!1 &280919702
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 280919703}
-  - component: {fileID: 280919706}
-  - component: {fileID: 280919705}
-  - component: {fileID: 280919704}
-  m_Layer: 5
-  m_Name: Coin Image (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &280919703
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280919702}
-  m_LocalRotation: {x: 0, y: 0, z: -0.13191034, w: 0.99126166}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810447119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15.16}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -119, y: 119}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &280919704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280919702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 1
-  m_AspectRatio: 1
---- !u!114 &280919705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280919702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &280919706
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280919702}
   m_CullTransparentMesh: 1
 --- !u!1 &281460727
 GameObject:
@@ -4396,7 +4465,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Favorite Gold Series
+  m_text: Fancy Gold Series
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8adfbfea3f7a64b40abfd37b88ce31d5, type: 2}
   m_sharedMaterial: {fileID: -3977771094409496905, guid: 8adfbfea3f7a64b40abfd37b88ce31d5, type: 2}
@@ -5247,6 +5316,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336974970}
   m_CullTransparentMesh: 1
+--- !u!1 &341038303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341038304}
+  - component: {fileID: 341038305}
+  m_Layer: 0
+  m_Name: ApiManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &341038304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341038303}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3481372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &341038305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341038303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88cc9fa63f6478d489d210691c83ed51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loadingPanel: {fileID: 165825308}
 --- !u!1 &343426184
 GameObject:
   m_ObjectHideFlags: 0
@@ -6544,6 +6658,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: 
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 0}
   _fishImage: {fileID: 0}
@@ -7187,96 +7308,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512487132}
   m_CullTransparentMesh: 1
---- !u!1 &513630670
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 513630671}
-  - component: {fileID: 513630674}
-  - component: {fileID: 513630673}
-  - component: {fileID: 513630672}
-  m_Layer: 5
-  m_Name: Coin Image (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &513630671
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513630670}
-  m_LocalRotation: {x: 0, y: 0, z: 0.08072077, w: 0.99673676}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810447119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.26}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: 90.3}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &513630672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513630670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 1
-  m_AspectRatio: 1
---- !u!114 &513630673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513630670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &513630674
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513630670}
-  m_CullTransparentMesh: 1
 --- !u!1 &522764554
 GameObject:
   m_ObjectHideFlags: 0
@@ -7585,181 +7616,1030 @@ MonoBehaviour:
       fevarit: 0
       tag: 0
       fishName: Black Oranda
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 2
       fishImage: {fileID: 21300000, guid: a6a2f2f7a3959f9479c80a32224275a7, type: 3}
     fishID: 1
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 3097084266856190944, guid: da72beeb6e48d5f408d7933e38fbe766, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
-      fishName: Red_Cap_Oranda
+      fishName: Red Cap Oranda
+      fishDetail: A white-bodied oranda with a bright red head growth.
+      funFact: The red head growth stands out sharply against its clean white body.
+      availability: LEGENDARY
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
       category: 2
       fishImage: {fileID: 21300000, guid: 5604c1c3d08fb6a4e9279de03381ca9d, type: 3}
     fishID: 2
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 643446150446714002, guid: 062acc0475a708148aa44dddaae56ea9, type: 3}
   - fishData:
       fevarit: 0
       tag: 1
       fishName: Normalfish
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 3
       fishImage: {fileID: 21300000, guid: bca37f3eb87a22149bdef6115a34344b, type: 3}
     fishID: 3
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 1510513327765187211, guid: 9759b9b3c55cc4346b8d4d67b5385def, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Red_Oranda
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 2
       fishImage: {fileID: 21300000, guid: 940aff48369813b459e59bd7f72d23c7, type: 3}
     fishID: 4
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 8648766132166751421, guid: f389ad6ab8c511046b20eeb98dfc7288, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Sarasa Oranda
+      fishDetail: An oranda goldfish with a red and white pattern and a prominent
+        head growth.
+      funFact: "The head growth, known as a \u201Cwen,\u201D continues to develop
+        as the fish matures."
+      availability: RARE
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
       category: 2
       fishImage: {fileID: 21300000, guid: c4bdd8c6233bc9a4c8f81d652d8fce73, type: 3}
     fishID: 5
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 3866907485162141814, guid: 6cb8c7c21df811849b6f4eb12d152dbe, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Black moor
+      fishDetail: A velvety black goldfish with a rounded body and telescope eyes
+      funFact: Its telescope eyes give it a unique look but also limit its vision
+        compared to other goldfish.
+      availability: COMMON
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
       category: 2
       fishImage: {fileID: 21300000, guid: 5ed6a8d3c3573e545bd43c1b1ac4aa2c, type: 3}
     fishID: 6
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 5624780117823280474, guid: 342afafab33d4b649be1f0b200e9ac73, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Calico Moor_Fantail
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 2
       fishImage: {fileID: 21300000, guid: 919b5dccce350544eaa73118a74340f6, type: 3}
     fishID: 7
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 4293379292516030293, guid: 82d7aade3581acf4ca998129ecbdc7e9, type: 3}
   - fishData:
       fevarit: 0
       tag: 1
       fishName: Crimson_Cascade_Koi
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 1
       fishImage: {fileID: 21300000, guid: 7b297a1b5075e4a4bb9bab5de2ed05f4, type: 3}
     fishID: 8
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 92072350088327564, guid: 9acfc13f50ac1a6449c41ded91a982d0, type: 3}
   - fishData:
       fevarit: 0
       tag: 1
       fishName: Doitsu_Kumonryu_koi
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 1
       fishImage: {fileID: 21300000, guid: a47b0819141b67e48904457502054fa1, type: 3}
     fishID: 9
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 4156533500075012513, guid: 1c98c3f9359ea3b4f96d9e00ef2777c3, type: 3}
   - fishData:
       fevarit: 0
       tag: 1
       fishName: Japanese_Koi_Fish
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 1
       fishImage: {fileID: 21300000, guid: d1d8041411cb41a4a839cd0abd24999e, type: 3}
     fishID: 10
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 4048722517349853770, guid: 70aaed36a55cf084c974a3c06cb4def0, type: 3}
   - fishData:
       fevarit: 0
       tag: 1
       fishName: Skeleton_Koi
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 1
       fishImage: {fileID: 21300000, guid: c43dcc4677710054483067c31f980713, type: 3}
     fishID: 11
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 7963845964585299332, guid: 2b57bfdc7bfa1394cb801c788c710566, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Red Comet Bio-Secure
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 0
       fishImage: {fileID: 21300000, guid: 9778ccba4f14c5d41b5a5eeeb536c9bb, type: 3}
     fishID: 12
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 8397364367861137731, guid: 02aa0e487996860419e789ff58d0d86c, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Red_Comet
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 0
       fishImage: {fileID: 21300000, guid: fa6589290aef59241aca4ba3336adf20, type: 3}
     fishID: 13
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 1895559138449021801, guid: 7b6cb6867db5f6843bd04ae4c087342e, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Sarasa Comet Bio-Secure
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 0
       fishImage: {fileID: 21300000, guid: ba0d52bb2bc91a44a8ac1a7c074fe5d7, type: 3}
     fishID: 14
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 7703563565287819996, guid: 7ed58e3d8fb538d4b98948a9bf774da5, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Sarasa_comet
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 0
       fishImage: {fileID: 21300000, guid: 4367848a0ac905747be2c9d097758ee4, type: 3}
     fishID: 15
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 8441589774689583797, guid: 8c6b8f7afc025e54c91332e4ad8dfeae, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
-      fishName: Shubunkin Bio-Secure
+      fishName: Shubunkin
+      fishDetail: A fast-swimming goldfish with a bright red color and long flowing
+        tail.
+      funFact: With its long flowing tail and comet-like shape, it adds constant
+        movement and color to any aquarium.
+      availability: COMMON
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 35 cm
       category: 0
       fishImage: {fileID: 21300000, guid: 90324bb7384879f4584c33b140aab677, type: 3}
     fishID: 16
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 3331162757216080435, guid: 56e3562d186bc8f48a172a1694df18ea, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Yellow Comet
+      fishDetail: A bright yellow comet goldfish with an active swimming style.
+      funFact: Its bright yellow color makes it highly visible and eye-catching in
+        aquarium setups.
+      availability: COMMON
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 35 cm
       category: 0
       fishImage: {fileID: 21300000, guid: 65a67a1f026b5f947b3aa5e353bba98a, type: 3}
     fishID: 17
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 5728054942581733841, guid: 1d5284dff5040d24e82b8717ce26ccd0, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Yellow Comet Bio-Secure
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 0
       fishImage: {fileID: 21300000, guid: 6de7a75d58856374b9938d1689598c8a, type: 3}
     fishID: 18
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 4052517072696299580, guid: 9559932a48e72d74a8ca98c286502e12, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Yellow Shubunkin Bio-Secure
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
       category: 0
       fishImage: {fileID: 21300000, guid: 55e620ece506d344fba2c8d1e6b88d99, type: 3}
     fishID: 19
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 5629957037245912127, guid: 0614916afcdfd5d469bea0bd03ddcc5d, type: 3}
   - fishData:
       fevarit: 0
       tag: 0
       fishName: Yellow-Black Shubunkin
+      fishDetail: A rare shubunkin variant with a mix of yellow and dark markings.
+      funFact: A unique variation of shubunkin, featuring a strong contrast between
+        yellow and black for a bold visual effect.
+      availability: RARE
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 35 cm
       category: 0
       fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
     fishID: 20
-    _fishUnlockPoint: 10
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Chagoi
+      fishDetail: A friendly and fast-growing koi known for its calm nature and strong
+        interaction with people.
+      funFact: "\u201CChagoi\u201D means \u201Ctea-colored koi,\u201D matching its
+        warm brown tones."
+      availability: COMMON
+      fishType: Cyprinus carpio
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 100 cm
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 21
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Soragoi
+      fishDetail: A smooth, grey koi with a calm presence and excellent growth potential.
+      funFact: "\u201CSoragoi\u201D means \u201Csky-colored koi,\u201D reflecting
+        its grey-blue appearance."
+      availability: COMMON
+      fishType: Cyprinus carpio
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 100 cm
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 22
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Kigoi
+      fishDetail: A bright yellow koi that stands out with its clean and solid coloration.
+      funFact: "\u201CKigoi\u201D means \u201Cyellow koi,\u201D describing its solid
+        color."
+      availability: COMMON
+      fishType: Cyprinus carpio
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 100 cm
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 23
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Benigoi
+      fishDetail: A solid red koi with a bold and uniform appearance.
+      funFact: "\u201CBenigoi\u201D means \u201Cred koi,\u201D matching its single-color
+        pattern."
+      availability: COMMON
+      fishType: Cyprinus carpio
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 100 cm
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 24
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Karasugoi
+      fishDetail: A deep black koi with a strong and striking presence.
+      funFact: "\u201CKarasugoi\u201D means \u201Ccrow-colored koi,\u201D reflecting
+        its black appearance."
+      availability: COMMON
+      fishType: Cyprinus carpio
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 100 cm
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 20
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Matsuba
+      fishDetail: A koi with a distinctive net-like pattern created by dark-centered
+        scales.
+      funFact: "Matsuba\u201D means \u201Cpinecone,\u201D describing its scale pattern."
+      availability: COMMON
+      fishType: Cyprinus carpio
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 100 cm
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 20
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Orenji Ogon
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 27
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Yamabuki Ogon
+      fishDetail: A vibrant metallic yellow koi known for its strong color and shine.
+      funFact: "\u201CYamabuki\u201D refers to a bright yellow tone, matching its
+        vivid color."
+      availability: COMMON
+      fishType: Cyprinus carpio
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 100 cm
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 28
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Asagi
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 29
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Shusui
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 30
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Ochiba Shigure
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 31
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Hajiro
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 32
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Hariwake
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 33
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Platinum Ogon
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 34
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Kohaku
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 35
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Sanke
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 36
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Showa
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 37
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Kujaku
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 38
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Kumonryu
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 39
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Goshiki
+      fishDetail: A unique koi combining red patterns with a dark, net-like base.
+      funFact: "\u201CGoshiki\u201D means \u201Cfive colors,\u201D reflecting its
+        complex appearance."
+      availability: LEGENDRY
+      fishType: Cyprinus carpio
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 100 cm
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 40
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Kikusui
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 41
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Shiro Bekko
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 42
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Beni Kumonryu
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 43
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Tancho Kohaku
+      fishDetail: A rare koi with a pure white body and a single red marking on its
+        head.
+      funFact: "\u201CTancho\u201D refers to the red head marking, similar to the
+        red-crowned crane."
+      availability: MYTHIC
+      fishType: Cyprinus carpio
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 100 cm
+      category: 1
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 44
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: White Comet
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 0
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 45
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Black Comet
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 0
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 46
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Red-Black Comet
+      fishDetail: A bold comet goldfish featuring a strong contrast of red and black
+        colors.
+      funFact: The strong contrast between red and black creates a bold and eye-catching
+        look in any aquarium.
+      availability: EPIC
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 35 cm
+      category: 0
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 47
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Tancho Sarasa
+      fishDetail: A rare goldfish with a white body and a distinct red marking on
+        its head.
+      funFact: The single red mark on its head creates a clean and highly recognizable
+        look.
+      availability: LEGENDRY
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 35 cm
+      category: 0
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 48
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Bristol Shubunkin
+      fishDetail: A unique shubunkin with rounded fins and a broad, flowing tail.
+      funFact: Its large, rounded tail gives it a softer, more flowing appearance
+        than typical goldfish.
+      availability: EPIC
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 35 cm
+      category: 0
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 49
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Panda Comet
+      fishDetail: A rare comet goldfish with black and white coloration resembling
+        a panda.
+      funFact: "Its bold black and white contrast gives it a distinctive \u201Cpanda-like\u201D
+        appearance in the aquarium"
+      availability: MYTHIC
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 35 cm
+      category: 0
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 50
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Red Fantail
+      fishDetail: A classic fancy goldfish with a rounded body and a double tail.
+      funFact: Its double tail creates a slower, more graceful swimming style compared
+        to comet goldfish.
+      availability: COMMON
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 51
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Calico Fantail
+      fishDetail: 
+      funFact: 
+      availability: 
+      fishType: 
+      fishoptimalTemperature: 
+      canfishSurviveIn: 
+      fishMaxSize: 
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 52
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Sarasa Fantail
+      fishDetail: A fantail goldfish with a clean red and white color pattern.
+      funFact: Its red and white pattern gives it a koi-like appearance in the aquarium.
+      availability: COMMON
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 53
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Calico Moor
+      fishDetail: An oranda goldfish with a red and white pattern and a prominent
+        head growth.
+      funFact: "The head growth, known as a \u201Cwen,\u201D continues to develop
+        as the fish matures."
+      availability: RARE
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 54
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Red-Black Oranda
+      fishDetail: An oranda with strong contrast between red and black coloration.
+      funFact: The contrast between red and black highlights the shape of its head
+        growth.
+      availability: RARE
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 55
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Calico Oranda
+      fishDetail: An oranda goldfish with a multicolored calico pattern and a rounded
+        body.
+      funFact: Its calico pattern adds extra depth and variation to the textured
+        head growth.
+      availability: RARE
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 56
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Ryukin
+      fishDetail: A high-backed goldfish with a deep body and flowing fins.
+      funFact: Its pronounced hump behind the head gives it a powerful and distinctive
+        silhouette.
+      availability: EPIC
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 57
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Ranchu
+      fishDetail: A rounded goldfish with a smooth back and no dorsal fin.
+      funFact: Its smooth back without a dorsal fin gives it a very distinct and
+        balanced appearance.
+      availability: EPIC
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 58
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Pearlscale
+      fishDetail: A compact goldfish with raised, bead-like scales and a rounded
+        body.
+      funFact: Its raised scales create a pearl-like texture unlike any other goldfish.
+      availability: EPIC
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 59
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Butterfly Fantail
+      fishDetail: A fantail goldfish with a wide, butterfly-shaped tail.
+      funFact: Its tail spreads like butterfly wings, especially when viewed from
+        above.
+      availability: LEGENDRY
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 60
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Veiltail Fantail
+      fishDetail: A goldfish with extremely long, flowing fins and an elegant appearance.
+      funFact: Its long fins create a slow, floating movement in the water.
+      availability: EPIC
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 61
+    fishUnlockCost: 10
+    _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
+  - fishData:
+      fevarit: 0
+      tag: 0
+      fishName: Tamasaba
+      fishDetail: A rare goldfish with a long body and flowing tail, combining features
+        of fancy and single-tail types.
+      funFact: It combines a strong swimming body with a flowing tail, making it
+        more active than most fancy goldfish.
+      availability: MYTHIC
+      fishType: Carassius auratus
+      fishoptimalTemperature: "18\u201324\xB0C"
+      canfishSurviveIn: "4\u201330\xB0C"
+      fishMaxSize: up to 30 cm
+      category: 2
+      fishImage: {fileID: 21300000, guid: 8355aa3497dae7b41a8fa13be90c2439, type: 3}
+    fishID: 62
+    fishUnlockCost: 10
     _placeFishPrefab: {fileID: 2967959657503516591, guid: 312bc2bfe72a2d5468badb2dd5583302, type: 3}
 --- !u!4 &539680525
 Transform:
@@ -8972,6 +9852,7 @@ MonoBehaviour:
   _levelExplorerText: {fileID: 587403119}
   _fishCollectText: {fileID: 751510829}
   _levelPerText: {fileID: 1521398249}
+  _userName: {fileID: 978340169}
   _collectScrollbar: {fileID: 1193332126}
 --- !u!114 &606533035
 MonoBehaviour:
@@ -9209,96 +10090,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616834323}
-  m_CullTransparentMesh: 1
---- !u!1 &621281293
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 621281294}
-  - component: {fileID: 621281297}
-  - component: {fileID: 621281296}
-  - component: {fileID: 621281295}
-  m_Layer: 5
-  m_Name: Coin Image (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &621281294
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621281293}
-  m_LocalRotation: {x: 0, y: 0, z: 0.026787622, w: 0.9996412}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810447119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.07}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166, y: 40}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &621281295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621281293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 1
-  m_AspectRatio: 1
---- !u!114 &621281296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621281293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &621281297
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621281293}
   m_CullTransparentMesh: 1
 --- !u!1 &626334596
 GameObject:
@@ -9592,7 +10383,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1703859759}
+  - {fileID: 8672139977333088491}
   m_Father: {fileID: 1813326896}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -10974,96 +11765,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730849144}
   m_CullTransparentMesh: 1
---- !u!1 &732331888
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 732331889}
-  - component: {fileID: 732331892}
-  - component: {fileID: 732331891}
-  - component: {fileID: 732331890}
-  m_Layer: 5
-  m_Name: Coin Image (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &732331889
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732331888}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810447119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48.1, y: 0}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &732331890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732331888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 1
-  m_AspectRatio: 1
---- !u!114 &732331891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732331888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &732331892
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732331888}
-  m_CullTransparentMesh: 1
 --- !u!1 &735428412
 GameObject:
   m_ObjectHideFlags: 0
@@ -11953,96 +12654,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765280373}
   m_CullTransparentMesh: 1
---- !u!1 &765747514
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 765747515}
-  - component: {fileID: 765747518}
-  - component: {fileID: 765747517}
-  - component: {fileID: 765747516}
-  m_Layer: 5
-  m_Name: Coin Image (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &765747515
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765747514}
-  m_LocalRotation: {x: 0, y: 0, z: 0.96529055, w: 0.26117852}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810447119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 149.72}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 132, y: -90.2}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &765747516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765747514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 1
-  m_AspectRatio: 1
---- !u!114 &765747517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765747514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &765747518
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765747514}
-  m_CullTransparentMesh: 1
 --- !u!1 &770527165
 GameObject:
   m_ObjectHideFlags: 0
@@ -12266,121 +12877,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775643510}
-  m_CullTransparentMesh: 1
---- !u!1 &810447118
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 810447119}
-  - component: {fileID: 810447122}
-  - component: {fileID: 810447121}
-  - component: {fileID: 810447120}
-  m_Layer: 5
-  m_Name: Coin Animation Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &810447119
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810447118}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 860297255}
-  - {fileID: 1349420660}
-  - {fileID: 621281294}
-  - {fileID: 963075510}
-  - {fileID: 280919703}
-  - {fileID: 513630671}
-  - {fileID: 1249562926}
-  - {fileID: 1388276214}
-  - {fileID: 765747515}
-  - {fileID: 1701198503}
-  - {fileID: 732331889}
-  m_Father: {fileID: 1267246963}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &810447120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810447118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa1bbc45478c2a48b9fdb1578cd290c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CoinImage: {fileID: 860297255}
-  initialPos: []
-  initialRotation: []
-  _coins:
-  - {fileID: 1349420659}
-  - {fileID: 621281293}
-  - {fileID: 963075509}
-  - {fileID: 280919702}
-  - {fileID: 513630670}
-  - {fileID: 1249562925}
-  - {fileID: 1388276213}
-  - {fileID: 765747514}
-  - {fileID: 1701198502}
-  - {fileID: 732331888}
-  coinsAmount: 10
-  _islocalmove: 0
---- !u!114 &810447121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810447118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.79607844}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &810447122
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810447118}
   m_CullTransparentMesh: 1
 --- !u!1 &811320650
 GameObject:
@@ -12825,7 +13321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &840679320
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12973,99 +13469,16 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: 
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 0}
   _fishImage: {fileID: 0}
---- !u!1 &860297254
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 860297255}
-  - component: {fileID: 860297258}
-  - component: {fileID: 860297257}
-  - component: {fileID: 860297256}
-  m_Layer: 5
-  m_Name: Coin Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &860297255
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860297254}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810447119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -306}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 1}
---- !u!114 &860297256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860297254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 1
-  m_AspectRatio: 1
---- !u!114 &860297257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860297254}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &860297258
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860297254}
-  m_CullTransparentMesh: 1
 --- !u!1 &878882306
 GameObject:
   m_ObjectHideFlags: 0
@@ -14505,96 +14918,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941823673}
-  m_CullTransparentMesh: 1
---- !u!1 &963075509
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 963075510}
-  - component: {fileID: 963075513}
-  - component: {fileID: 963075512}
-  - component: {fileID: 963075511}
-  m_Layer: 5
-  m_Name: Coin Image (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &963075510
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963075509}
-  m_LocalRotation: {x: 0, y: 0, z: 0.19235073, w: 0.9813263}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810447119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.18}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 143}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &963075511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963075509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 1
-  m_AspectRatio: 1
---- !u!114 &963075512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963075509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &963075513
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963075509}
   m_CullTransparentMesh: 1
 --- !u!1 &968117057
 GameObject:
@@ -17678,7 +18001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1193332125
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18235,96 +18558,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221463829}
   m_CullTransparentMesh: 1
---- !u!1 &1249562925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1249562926}
-  - component: {fileID: 1249562929}
-  - component: {fileID: 1249562928}
-  - component: {fileID: 1249562927}
-  m_Layer: 5
-  m_Name: Coin Image (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1249562926
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249562925}
-  m_LocalRotation: {x: 0, y: 0, z: 0.12593928, w: 0.99203795}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810447119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 14.47}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -140}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1249562927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249562925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 1
-  m_AspectRatio: 1
---- !u!114 &1249562928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249562925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1249562929
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249562925}
-  m_CullTransparentMesh: 1
 --- !u!1 &1253326344
 GameObject:
   m_ObjectHideFlags: 0
@@ -18541,7 +18774,7 @@ MonoBehaviour:
   - {fileID: 811320650}
   - {fileID: 990318138}
   _fishComponent:
-  - {fileID: 1703859758}
+  - {fileID: 4776294364533044869}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -18735,8 +18968,9 @@ RectTransform:
   - {fileID: 3392796654660095440}
   - {fileID: 1056400128}
   - {fileID: 606533037}
-  - {fileID: 810447119}
+  - {fileID: 637379308146018392}
   - {fileID: 392889775}
+  - {fileID: 165825309}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -20239,96 +20473,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349395792}
   m_CullTransparentMesh: 1
---- !u!1 &1349420659
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1349420660}
-  - component: {fileID: 1349420663}
-  - component: {fileID: 1349420662}
-  - component: {fileID: 1349420661}
-  m_Layer: 5
-  m_Name: Coin Image (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1349420660
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349420659}
-  m_LocalRotation: {x: 0, y: 0, z: 0.2732038, w: 0.9619562}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810447119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 31.71}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170, y: 0}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1349420661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349420659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 1
-  m_AspectRatio: 1
---- !u!114 &1349420662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349420659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1349420663
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349420659}
-  m_CullTransparentMesh: 1
 --- !u!1 &1351794360
 GameObject:
   m_ObjectHideFlags: 0
@@ -20978,96 +21122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
---- !u!1 &1388276213
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1388276214}
-  - component: {fileID: 1388276217}
-  - component: {fileID: 1388276216}
-  - component: {fileID: 1388276215}
-  m_Layer: 5
-  m_Name: Coin Image (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1388276214
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388276213}
-  m_LocalRotation: {x: 0, y: 0, z: 0.71654546, w: 0.6975404}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810447119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 91.54}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -131, y: -88.9}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1388276215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388276213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 1
-  m_AspectRatio: 1
---- !u!114 &1388276216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388276213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1388276217
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388276213}
-  m_CullTransparentMesh: 1
 --- !u!1 &1396472014
 GameObject:
   m_ObjectHideFlags: 0
@@ -21984,7 +22038,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: cad43127f1b2c3b4a9c033be80965cd5, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -26077,106 +26131,6 @@ CanvasRenderer:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 258216910010631926, guid: 3dba8e391c1c0fb4c80652b0f656957d, type: 3}
   m_PrefabInstance: {fileID: 3386588962133959809}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1701198502
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1701198503}
-  - component: {fileID: 1701198506}
-  - component: {fileID: 1701198505}
-  - component: {fileID: 1701198504}
-  m_Layer: 5
-  m_Name: Coin Image (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1701198503
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701198502}
-  m_LocalRotation: {x: 0, y: 0, z: 0.30095538, w: 0.9536382}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810447119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 35.03}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 45.50001, y: -39}
-  m_SizeDelta: {x: 80, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1701198504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701198502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 1
-  m_AspectRatio: 1
---- !u!114 &1701198505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701198502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1701198506
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701198502}
-  m_CullTransparentMesh: 1
---- !u!1 &1703859758 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6120788468146901108, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-  m_PrefabInstance: {fileID: 1637523307140294385}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1703859759 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-  m_PrefabInstance: {fileID: 1637523307140294385}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1707073565
 GameObject:
@@ -31382,6 +31336,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4953674988872534134}
   m_CullTransparentMesh: 1
+--- !u!1 &142116929409311991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4192209966279075426}
+  - component: {fileID: 8447722599995807143}
+  - component: {fileID: 9127195237738028013}
+  - component: {fileID: 1604207988473276081}
+  m_Layer: 5
+  m_Name: Coin Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!114 &217131808096714726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31509,6 +31482,44 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &334430483877775191
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519409474030668697}
+  m_CullTransparentMesh: 1
+--- !u!114 &340988520592728490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497020342948509385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!224 &385957311561528524
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31600,6 +31611,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 0.5625
+--- !u!224 &637379308146018392
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400540426582388809}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4192209966279075426}
+  - {fileID: 6231169163616776670}
+  - {fileID: 1905587665196088970}
+  - {fileID: 733696983524008535}
+  - {fileID: 1549412108023987562}
+  - {fileID: 9196318889889630854}
+  - {fileID: 2170029946148494209}
+  - {fileID: 4572402702232366342}
+  - {fileID: 5635284892924300427}
+  - {fileID: 4481517639019511988}
+  - {fileID: 1246332530722548995}
+  m_Father: {fileID: 1267246963}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &651169433720548635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31708,6 +31749,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &733696983524008535
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6625821319996886238}
+  m_LocalRotation: {x: 0, y: 0, z: 0.19235073, w: 0.9813263}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 637379308146018392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.18}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 143}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &797140192048934323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31722,6 +31782,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 1
+--- !u!222 &803769166147097728
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400540426582388809}
+  m_CullTransparentMesh: 1
 --- !u!114 &849382464699882092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32085,6 +32153,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!222 &1145062917328872497
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4539120708677525877}
+  m_CullTransparentMesh: 1
 --- !u!114 &1209256291242361275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32176,6 +32252,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!224 &1246332530722548995
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466503947196974867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 637379308146018392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -48.1, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1287827302537983097
 GameObject:
   m_ObjectHideFlags: 0
@@ -32234,7 +32329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2a8032666b067b046a53a31d1439b8d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9dc78b2dba1e1ea44bc435c0e14f7878, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32321,6 +32416,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1389604595695683464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497020342948509385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
 --- !u!114 &1391836266068166163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32351,6 +32460,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1394666879885114296
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014599443448265538}
+  m_CullTransparentMesh: 1
+--- !u!1 &1400540426582388809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 637379308146018392}
+  - component: {fileID: 803769166147097728}
+  - component: {fileID: 8231192842935126153}
+  - component: {fileID: 7732796444304174274}
+  m_Layer: 5
+  m_Name: Coin Animation Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!222 &1404387089149440953
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32408,6 +32544,20 @@ RectTransform:
   m_AnchoredPosition: {x: -33.799988, y: 0}
   m_SizeDelta: {x: 253, y: 50}
   m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &1472815519551236980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6515587612848133347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
 --- !u!114 &1498550037040878598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32463,10 +32613,56 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: 
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 0}
   _fishNameText: {fileID: 5984759523856259179}
+  _fishDetailText: {fileID: 8382653357017864124}
+  _funfactText: {fileID: 4150586998092954819}
+  _availabilityText: {fileID: 2562386549918745841}
+  _fishTypeText: {fileID: 8795823266321669326}
+  _fishOptimalTempText: {fileID: 5072651102063600295}
+  _fishMaxSizeText: {fileID: 1005550433628745407}
   _fishImage: {fileID: 8896926931335408435}
+--- !u!224 &1549412108023987562
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014599443448265538}
+  m_LocalRotation: {x: 0, y: 0, z: -0.13191034, w: 0.99126166}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 637379308146018392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15.16}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -119, y: 119}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1604207988473276081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142116929409311991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
 --- !u!222 &1633793350043824004
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32475,135 +32671,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8262388424398408376}
   m_CullTransparentMesh: 1
---- !u!1001 &1637523307140294385
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 647308454}
-    m_Modifications:
-    - target: {fileID: 292529609962789545, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_text
-      value: Black Goldfish njnjknk
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197812783173897229, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 447.73395
-      objectReference: {fileID: 0}
-    - target: {fileID: 3700346795327180128, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5008814171950982267, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6120788468146901108, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_Name
-      value: Lock Fish Explore Component
-      objectReference: {fileID: 0}
-    - target: {fileID: 6120788468146901108, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7451343943596834193, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7976696276629364884, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 350
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 390
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 445
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -270
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8905578568490779150, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
 --- !u!1 &1644139665476390251
 GameObject:
   m_ObjectHideFlags: 0
@@ -32671,6 +32738,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3973442673195195982}
   m_CullTransparentMesh: 1
+--- !u!224 &1905587665196088970
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497020342948509385}
+  m_LocalRotation: {x: 0, y: 0, z: 0.026787622, w: 0.9996412}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 637379308146018392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.07}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 166, y: 40}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1926686777557050253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32950,6 +33036,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!224 &2170029946148494209
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311832319509186109}
+  m_LocalRotation: {x: 0, y: 0, z: 0.12593928, w: 0.99203795}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 637379308146018392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 14.47}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -140}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2221391625667233358
 GameObject:
   m_ObjectHideFlags: 0
@@ -32977,6 +33082,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8454107887942710855}
   m_CullTransparentMesh: 1
+--- !u!114 &2257875698401989570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6625821319996886238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!224 &2314650518523661095
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33325,6 +33460,36 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3140429925440570871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542263487812046281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1001 &3208115718222160246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33333,22 +33498,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1480941435}
     m_Modifications:
-    - target: {fileID: 25372061893640948, guid: b11d4f6ea763bf74498b6dabfc66621e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 447.73395
-      objectReference: {fileID: 0}
-    - target: {fileID: 652697039062093108, guid: b11d4f6ea763bf74498b6dabfc66621e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4316187783313700137, guid: b11d4f6ea763bf74498b6dabfc66621e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 6257856746737180508, guid: b11d4f6ea763bf74498b6dabfc66621e, type: 3}
-      propertyPath: m_text
-      value: Black Goldfish
-      objectReference: {fileID: 0}
     - target: {fileID: 7073285390129149876, guid: b11d4f6ea763bf74498b6dabfc66621e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -33432,10 +33581,6 @@ PrefabInstance:
     - target: {fileID: 8454702248349241220, guid: b11d4f6ea763bf74498b6dabfc66621e, type: 3}
       propertyPath: m_Name
       value: Collection Fish Component
-      objectReference: {fileID: 0}
-    - target: {fileID: 8454702248349241220, guid: b11d4f6ea763bf74498b6dabfc66621e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33646,6 +33791,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 700, y: 106.62251}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3399727035739807282
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497020342948509385}
+  m_CullTransparentMesh: 1
 --- !u!222 &3456152880494863512
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33654,6 +33807,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3969340152835352085}
   m_CullTransparentMesh: 1
+--- !u!1 &3466503947196974867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1246332530722548995}
+  - component: {fileID: 5359423369576161265}
+  - component: {fileID: 8916384625538929035}
+  - component: {fileID: 5984220194221747537}
+  m_Layer: 5
+  m_Name: Coin Image (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!114 &3498646038096255800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33794,6 +33966,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &3542263487812046281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9196318889889630854}
+  - component: {fileID: 7005454729992733575}
+  - component: {fileID: 3140429925440570871}
+  - component: {fileID: 3773008624575656500}
+  m_Layer: 5
+  m_Name: Coin Image (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!111 &3570435325505586995
 Animation:
   m_ObjectHideFlags: 0
@@ -33915,6 +34106,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 0.41428572
+--- !u!114 &3773008624575656500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542263487812046281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
 --- !u!222 &3813668626905710901
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33991,6 +34196,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &3904846615604776086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014599443448265538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &3959950990841345627
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34063,6 +34298,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &4014599443448265538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1549412108023987562}
+  - component: {fileID: 1394666879885114296}
+  - component: {fileID: 3904846615604776086}
+  - component: {fileID: 5769141447104024140}
+  m_Layer: 5
+  m_Name: Coin Image (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!114 &4029460276952007658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34229,6 +34483,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!224 &4192209966279075426
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142116929409311991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 637379308146018392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -306}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &4203789218385515828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34472,6 +34745,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 1.2941177
+--- !u!224 &4481517639019511988
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828061157345942404}
+  m_LocalRotation: {x: 0, y: 0, z: 0.30095538, w: 0.9536382}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 637379308146018392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 35.03}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 45.50001, y: -39}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &4497020342948509385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1905587665196088970}
+  - component: {fileID: 3399727035739807282}
+  - component: {fileID: 340988520592728490}
+  - component: {fileID: 1389604595695683464}
+  m_Layer: 5
+  m_Name: Coin Image (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!114 &4508987980910769942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34502,6 +34813,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4539120708677525877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4572402702232366342}
+  - component: {fileID: 1145062917328872497}
+  - component: {fileID: 8676431801940157966}
+  - component: {fileID: 5420560648005738387}
+  m_Layer: 5
+  m_Name: Coin Image (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &4551826788406550673
 GameObject:
   m_ObjectHideFlags: 0
@@ -34521,6 +34851,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!224 &4572402702232366342
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4539120708677525877}
+  m_LocalRotation: {x: 0, y: 0, z: 0.71654546, w: 0.6975404}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 637379308146018392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 91.54}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -131, y: -88.9}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4605022979419186416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34603,6 +34952,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 16.9}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &4776294364533044869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6120788468146901108, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+  m_PrefabInstance: {fileID: 7263645184284714597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4823810686847000720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828061157345942404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &4845466195278646811
 GameObject:
   m_ObjectHideFlags: 0
@@ -34701,6 +35085,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7400875176588174078}
   m_CullTransparentMesh: 1
+--- !u!114 &5070007237947877566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828061157345942404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
 --- !u!114 &5072651102063600295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34897,6 +35295,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8266266231088948848}
   m_CullTransparentMesh: 1
+--- !u!222 &5359423369576161265
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466503947196974867}
+  m_CullTransparentMesh: 1
 --- !u!222 &5377990911057199101
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34954,6 +35360,50 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &5420560648005738387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4539120708677525877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
+--- !u!114 &5446439885969966139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519409474030668697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
+--- !u!222 &5448670192668910969
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828061157345942404}
+  m_CullTransparentMesh: 1
+--- !u!222 &5468905722322212593
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311832319509186109}
+  m_CullTransparentMesh: 1
 --- !u!224 &5482424912206224004
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35001,6 +35451,25 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 16.9}
   m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &5635284892924300427
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519409474030668697}
+  m_LocalRotation: {x: 0, y: 0, z: 0.96529055, w: 0.26117852}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 637379308146018392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 149.72}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 132, y: -90.2}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5671932211625967525
 MonoBehaviour:
@@ -35063,7 +35532,51 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
+--- !u!114 &5761239695738414402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519409474030668697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5769141447104024140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4014599443448265538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
 --- !u!114 &5827414794334373941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35224,6 +35737,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9689176e803e8e4099acbc0c61bae61, type: 3}
+--- !u!114 &5984220194221747537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466503947196974867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
 --- !u!114 &5984759523856259179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35315,6 +35842,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5988555789128903586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6625821319996886238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
 --- !u!222 &6044452134244762782
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35555,6 +36096,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 76, y: 25}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!224 &6231169163616776670
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6515587612848133347}
+  m_LocalRotation: {x: 0, y: 0, z: 0.2732038, w: 0.9619562}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 637379308146018392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 31.71}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -170, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6269868895363926549
 GameObject:
   m_ObjectHideFlags: 0
@@ -35697,6 +36257,28 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6450686413989657307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311832319509186109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
+--- !u!222 &6483793837846559392
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6625821319996886238}
+  m_CullTransparentMesh: 1
 --- !u!1 &6497109647181580444
 GameObject:
   m_ObjectHideFlags: 0
@@ -35716,6 +36298,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &6515587612848133347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6231169163616776670}
+  - component: {fileID: 6527953089486342619}
+  - component: {fileID: 9185774578281703206}
+  - component: {fileID: 1472815519551236980}
+  m_Layer: 5
+  m_Name: Coin Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!222 &6527953089486342619
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6515587612848133347}
+  m_CullTransparentMesh: 1
 --- !u!114 &6566327480805769933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35746,6 +36355,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6625821319996886238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 733696983524008535}
+  - component: {fileID: 6483793837846559392}
+  - component: {fileID: 2257875698401989570}
+  - component: {fileID: 5988555789128903586}
+  m_Layer: 5
+  m_Name: Coin Image (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!224 &6626023459412516159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35784,6 +36412,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 22.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!1 &6828061157345942404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4481517639019511988}
+  - component: {fileID: 5448670192668910969}
+  - component: {fileID: 4823810686847000720}
+  - component: {fileID: 5070007237947877566}
+  m_Layer: 5
+  m_Name: Coin Image (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!224 &6849078008378813484
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35859,6 +36506,14 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6140265257239197943}
+  m_CullTransparentMesh: 1
+--- !u!222 &7005454729992733575
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542263487812046281}
   m_CullTransparentMesh: 1
 --- !u!224 &7021877104766422353
 RectTransform:
@@ -36007,6 +36662,103 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &7263645184284714597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 647308454}
+    m_Modifications:
+    - target: {fileID: 6120788468146901108, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_Name
+      value: Lock Fish Explore Component
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 390
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 445
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -270
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
 --- !u!1 &7280919944279810845
 GameObject:
   m_ObjectHideFlags: 0
@@ -36021,6 +36773,25 @@ GameObject:
   - component: {fileID: 4203789218385515828}
   m_Layer: 5
   m_Name: Unlock Point Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &7311832319509186109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2170029946148494209}
+  - component: {fileID: 5468905722322212593}
+  - component: {fileID: 7520069277932221930}
+  - component: {fileID: 6450686413989657307}
+  m_Layer: 5
+  m_Name: Coin Image (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36131,6 +36902,55 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &7519409474030668697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5635284892924300427}
+  - component: {fileID: 334430483877775191}
+  - component: {fileID: 5761239695738414402}
+  - component: {fileID: 5446439885969966139}
+  m_Layer: 5
+  m_Name: Coin Image (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &7520069277932221930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311832319509186109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &7615567991371985589
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36147,6 +36967,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4288797397635794272}
   m_CullTransparentMesh: 1
+--- !u!114 &7732796444304174274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400540426582388809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa1bbc45478c2a48b9fdb1578cd290c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinImage: {fileID: 4192209966279075426}
+  initialPos: []
+  initialRotation: []
+  _coins:
+  - {fileID: 6515587612848133347}
+  - {fileID: 4497020342948509385}
+  - {fileID: 6625821319996886238}
+  - {fileID: 4014599443448265538}
+  - {fileID: 3542263487812046281}
+  - {fileID: 7311832319509186109}
+  - {fileID: 4539120708677525877}
+  - {fileID: 7519409474030668697}
+  - {fileID: 6828061157345942404}
+  - {fileID: 3466503947196974867}
+  coinsAmount: 10
+  _islocalmove: 0
 --- !u!1 &7805133988017226744
 GameObject:
   m_ObjectHideFlags: 0
@@ -36302,6 +37150,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8231192842935126153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400540426582388809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.79607844}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8232226375475796262
 GameObject:
   m_ObjectHideFlags: 0
@@ -36810,6 +37688,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!222 &8447722599995807143
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142116929409311991}
+  m_CullTransparentMesh: 1
 --- !u!1 &8454107887942710855
 GameObject:
   m_ObjectHideFlags: 0
@@ -37006,6 +37892,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 22.199997}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!224 &8672139977333088491 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7989394094258521626, guid: af0a398ab7ed1ab428a6213bca18ad1e, type: 3}
+  m_PrefabInstance: {fileID: 7263645184284714597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8676431801940157966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4539120708677525877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &8699751207588830577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37254,6 +38175,36 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8916384625538929035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466503947196974867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8946188384400172564
 GameObject:
   m_ObjectHideFlags: 0
@@ -37347,6 +38298,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 1.7974683
+--- !u!114 &9127195237738028013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142116929409311991}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &9127306364282930039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37377,6 +38358,55 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9185774578281703206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6515587612848133347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.35686275, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2839fc6b1c7e8fc4a9d4697d6bab0ec0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!224 &9196318889889630854
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542263487812046281}
+  m_LocalRotation: {x: 0, y: 0, z: 0.08072077, w: 0.99673676}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 637379308146018392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.26}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 75, y: 90.3}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

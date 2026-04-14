@@ -10,15 +10,21 @@ namespace Amar
 {
     public class TakePicture : MonoBehaviour
     {
-        public GameObject Screeshot;
+        public GameObject Screeshot,_logoPanel;
+        public Image _logoImage;
         public RawImage _image;
         public List<GameObject> _DeactiveCanvas;
         public int _pointAmount;
+        
+
 
         // Start is called before the first frame update
         void Start()
         {
+            PointManager _pointManager = PointManager.Instance;
 
+            _pointManager.Loadimage(_pointManager._shopOwnerResponce.result.logo, _logoImage, 250f);
+            _logoPanel.SetActive(false);
         }
 
         // Update is called once per frame
@@ -41,6 +47,7 @@ namespace Amar
 
 
             //	StartCoroutine(Screenshotsceen());
+
             StartCoroutine(TakeScreenshotAndSave());
             PointManager.Instance.AddPoint(_pointAmount);
             UIManager.Instance.DisplayPoint();
@@ -52,6 +59,7 @@ namespace Amar
             {
                 _DeactiveCanvas[i].SetActive(false);
             }
+            _logoPanel.SetActive(true);
             yield return new WaitForSeconds(0.5f);
             yield return new WaitForEndOfFrame();
 
@@ -70,6 +78,7 @@ namespace Amar
             yield return new WaitForSeconds(5.0f);
             // To avoid memory leaks
             Destroy(ss);
+            
         }
 
 
@@ -79,10 +88,12 @@ namespace Amar
             Screeshot.SetActive(true);
             yield return new WaitForSeconds(2.0f);
             Screeshot.SetActive(false);
+            _logoPanel.SetActive(false);
             for (int i = 0; i < _DeactiveCanvas.Count; i++)
             {
                 _DeactiveCanvas[i].SetActive(true);
             }
+            
 
         }
     }

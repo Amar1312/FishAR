@@ -12,7 +12,7 @@ public class APIManager : MonoBehaviour
     public static APIManager Instance;
     public GameObject _loadingPanel;
 
-    private const string APIBASEURL = "https://1c12-2402-a00-192-16ae-91e-ceaf-f91a-1036.ngrok-free.app/mixed_place/api";
+    private const string APIBASEURL = "https://4bf9-2402-a00-192-16ae-482a-1770-736d-e17.ngrok-free.app/mixed_place/api";
     private const string SHOPOWNER = APIBASEURL + "/shop-owner";
 
     private void Awake()
@@ -32,9 +32,15 @@ public class APIManager : MonoBehaviour
         
     }
 
-    public void APiCall()
+    private void Update()
     {
-        QRManager.Instance.ShopOwnerAPiCall("MP-BSJ12TNQ");
+        if (Input.GetKeyDown(KeyCode.T))
+            APiCall("MP-BSJ12TNQ");
+    }
+
+    public void APiCall(string qrcode)
+    {
+        QRManager.Instance.ShopOwnerAPiCall(qrcode);
     }
 
 
@@ -92,6 +98,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Shop owner Response: " + request.downloadHandler.text);
             callback = JsonUtility.FromJson<ShopOwnerResponce>(request.downloadHandler.text);
             callback.status = true;
+            PlayerPrefs.SetString("QRC", qrText);
         }
         else if (request.responseCode == 401)
         {

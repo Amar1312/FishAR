@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class HomeSceneManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class HomeSceneManager : MonoBehaviour
     public UnlockPopupHomePanel _unlockScript;
     public MyCollectionPanel _myCollectionScript;
     public MyProfilePanel _profileScript;
+    
 
     [Space]
     [Header("Daily Point")]
@@ -49,20 +51,23 @@ public class HomeSceneManager : MonoBehaviour
         DataContainerManager _dataManager = DataContainerManager.Instance;
         _fishSearch._fishComponent.Clear();
         _myCollectionScript._allFishComponent.Clear();
+ 
         for (int i = 0; i < _dataManager._fishData.Count; i++)
         {
             FishDetail fishdetail = Instantiate(_explorePanelPrefab, _explorePanelContainer);
             fishdetail._fishDetail = _dataManager._fishData[i].fishData;
             fishdetail._fishID = _dataManager._fishData[i].fishID;
-            fishdetail._fishUnlockPoint = _dataManager._fishData[i]._fishUnlockPoint;
+            // Use fishUnlockCost so the cost survives FishSaveManager.Load overwriting _fishUnlockPoint
+            fishdetail._fishUnlockPoint = _dataManager._fishData[i].fishUnlockCost;
             _fishSearch._fishComponent.Add(fishdetail.gameObject);
 
             CollectionFishComponent fishcolle = Instantiate(_collectionPanelPrefab, _collectionContainer);
             fishcolle._fishDetail = _dataManager._fishData[i].fishData;
             fishcolle._fishId = _dataManager._fishData[i].fishID;
-            fishcolle._fishUnlockPoint = _dataManager._fishData[i]._fishUnlockPoint;
+            fishcolle._fishUnlockPoint = _dataManager._fishData[i].fishUnlockCost;
             _myCollectionScript._allFishComponent.Add(fishcolle);
         }
+
 
         Invoke(nameof(CheckDailyCall), 2f);
     }
@@ -98,7 +103,9 @@ public class HomeSceneManager : MonoBehaviour
     {
         Debug.Log("Daily Method Called");
         _dailyMessage.text = "Congrats! " + _dailyPoint.ToString() + " Daily points added!";
+
         PointManager.Instance.AddPoint(_dailyPoint);
+
         _coinAnimationPanel.SetActive(true);
         _dailyPopup.SetActive(true);
         Invoke(nameof(OffDailyPopup), 5f);

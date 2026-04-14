@@ -7,195 +7,157 @@ using System.Collections.Generic;
 public class PointManager : Singleton<PointManager>
 {
     public int _point;
-    //public static PointManager Instance;
 
     public ShopOwnerResponce _shopOwnerResponce;
-    public List<int> _unLockFishID;
-    public List<int> _categoryComplete;
-    public List<int> _likeFishID;
 
-    private void Awake()
-    {
-        //if (Instance == null)
-        //{
-        //    Instance = this;
-        //    DontDestroyOnLoad(this);
-        //}
-        //else
-        //{
-        //    Destroy(gameObject);
-        //}
+    public List<int> _unLockFishID = new List<int>();
+    public List<int> _categoryComplete = new List<int>();
+    public List<int> _likeFishID = new List<int>();
 
-        if (PlayerPrefs.HasKey("Point"))
-        {
-            _point = PlayerPrefs.GetInt("Point");
-        }
-        _unLockFishID = LoadIntList("FishID");
-        _categoryComplete = LoadIntList("CategoryData");
-        _likeFishID = LoadIntList("LikeFishData");
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        // Always load — UserSaveManager.Load creates default data on first run
+        UserData user = UserSaveManager.Load();
+        _point = user.points;
+        _unLockFishID = new List<int>(user.fishFullSaveData.unlockedFishIDs);
+        _likeFishID = new List<int>(user.fishFullSaveData.favoriteFishIDs);
+        _categoryComplete = LoadIntList("CategoryData");
     }
 
-    public void AddPoint(int Point)
+    /// <summary>Adds the given amount to the player's points and persists.</summary>
+    public void AddPoint(int point)
     {
-        _point += Point;
-        PlayerPrefs.SetInt("Point", _point);
+        _point += point;
+
+        UserData user = UserSaveManager.Load();
+        user.points = _point;
+        UserSaveManager.Save(user);
+
+       // DataContainerManager.Instance.SaveAllData();
+        Debug.Log("Points after add: " + _point);
     }
 
-    public void Removepoint(int Point)
+    /// <summary>Subtracts the given amount from the player's points and persists.</summary>
+    public void Removepoint(int point)
     {
-        if (_point >= Point)
+        if (_point >= point)
         {
-            _point -= Point;
-            PlayerPrefs.SetInt("Point", _point);
+            _point -= point;
+
+            UserData user = UserSaveManager.Load();
+            user.points = _point;
+            UserSaveManager.Save(user);
+
+            Debug.Log("Points after remove: " + _point);
         }
         else
         {
-            Debug.Log("Point is Not Sufficient");
+            Debug.Log("Points not sufficient");
         }
-    }
-    public void UnLockFishSave(int Id)
-    {
-        if (!_unLockFishID.Contains(Id))
-        {
-            _unLockFishID.Add(Id);
-        }
-        SaveIntList("FishID", _unLockFishID);
     }
 
-    public void SetCategoryData(int Level)
+    /// <summary>Records a fish as unlocked and persists.</summary>
+    public void UnLockFishSave(int id)
     {
-        if (!_categoryComplete.Contains(Level))
+        if (!_unLockFishID.Contains(id))
+            _unLockFishID.Add(id);
+
+        UserData user = UserSaveManager.Load();
+        if (!user.fishFullSaveData.unlockedFishIDs.Contains(id))
         {
-            _categoryComplete.Add(Level);
+            user.fishFullSaveData.unlockedFishIDs.Add(id);
+            UserSaveManager.Save(user);
         }
+
+        //DataContainerManager.Instance.SaveAllData();
+    }
+
+    /// <summary>Records a completed category level and persists.</summary>
+    public void SetCategoryData(int level)
+    {
+        if (!_categoryComplete.Contains(level))
+            _categoryComplete.Add(level);
+
         SaveIntList("CategoryData", _categoryComplete);
     }
 
+    /// <summary>Adds a fish to the favourites list and persists.</summary>
     public void AddLikeData(int fishId)
     {
         if (!_likeFishID.Contains(fishId))
-        {
             _likeFishID.Add(fishId);
+
+        UserData user = UserSaveManager.Load();
+        if (!user.fishFullSaveData.favoriteFishIDs.Contains(fishId))
+        {
+            user.fishFullSaveData.favoriteFishIDs.Add(fishId);
+            UserSaveManager.Save(user);
         }
-        SaveIntList("LikeFishData", _likeFishID);
+
+       // DataContainerManager.Instance.SaveAllData();
     }
 
+    /// <summary>Removes a fish from the favourites list and persists.</summary>
     public void RemoveLikeData(int fishId)
     {
-        if (_likeFishID.Contains(fishId))
+        _likeFishID.Remove(fishId);
+
+        UserData user = UserSaveManager.Load();
+        // Fixed: was inverted (!Contains) so removal never happened
+        if (user.fishFullSaveData.favoriteFishIDs.Contains(fishId))
         {
-            _likeFishID.Remove(fishId);
+            user.fishFullSaveData.favoriteFishIDs.Remove(fishId);
+            UserSaveManager.Save(user);
         }
-        SaveIntList("LikeFishData", _likeFishID);
+
+        //DataContainerManager.Instance.SaveAllData();
     }
 
     public void SaveIntList(string key, List<int> list)
     {
-        string value = string.Join(",", list);
-        PlayerPrefs.SetString(key, value);
+        PlayerPrefs.SetString(key, string.Join(",", list));
         PlayerPrefs.Save();
     }
 
     public List<int> LoadIntList(string key)
     {
         string value = PlayerPrefs.GetString(key, "");
-
         List<int> list = new List<int>();
 
         if (!string.IsNullOrEmpty(value))
         {
-            string[] values = value.Split(',');
-
-            foreach (string v in values)
+            foreach (string v in value.Split(','))
             {
-                list.Add(int.Parse(v));
+                if (int.TryParse(v, out int parsed))
+                    list.Add(parsed);
             }
         }
 
         return list;
     }
-    
 
-    public void Loadimage(string ImageUrl, Image _image, float maxWidth)
+    public void Loadimage(string imageUrl, Image image, float maxWidth)
     {
-        //Debug.Log("first Load Image............................................................................");
-        string url = ImageUrl.Replace(@"\", "");
-        //Debug.Log("URL : " + url);
+        string url = imageUrl.Replace(@"\", "");
         Davinci.get()
-       .load(url)
-       .into(_image)
-       .withStartAction(() =>
-       {
-           //statusTxt.text = "Download has been started.";
-           //Debug.Log("Download Is Started..................");
-           //UIManager.UIInstance.ToggleLoadingPanel(true);
-       })
-       .withDownloadProgressChangedAction((progress) =>
-       {
-           //statusTxt.text = "Download progress: " + progress;
-       })
-       .withDownloadedAction(() =>
-       {
-           //statusTxt.text = "Download has been completed.";
-           //Debug.Log("Download Is Completed..................");
-       })
-       .withLoadedAction(() =>
-       {
-           // statusTxt.text = "Image has been loaded.";
-           //Debug.Log("Image Is Downloaded.........................");
-       })
-       .withErrorAction((error) =>
-       {
-           // statusTxt.text = "Got error : " + error;
-           Debug.Log("Error : " + error);
-           //UIManager.UIInstance.ToggleLoadingPanel(false);
-       })
-       .withEndAction(() =>
-       {
-           //print("Operation has been finished.");
-           //UIManager.UIInstance.ToggleLoadingPanel(false);
-
-
-           SetMaxSize(maxWidth, _image);
-       })
-
-       .setFadeTime(0.1f)
-       .setCached(true)
-       .start();
-        //_loadOnce = true;
+            .load(url)
+            .into(image)
+            .withStartAction(() => { })
+            .withDownloadProgressChangedAction((progress) => { })
+            .withDownloadedAction(() => { })
+            .withLoadedAction(() => { })
+            .withErrorAction((error) => { Debug.Log("Image load error: " + error); })
+            .withEndAction(() => { SetMaxSize(maxWidth, image); })
+            .setFadeTime(0.1f)
+            .setCached(true)
+            .start();
     }
-    public void SetMaxSize(float maxWidth, Image _meImage)
+
+    public void SetMaxSize(float maxWidth, Image image)
     {
-        // Get the aspect ratio of the image
-        float aspectRatio = _meImage.sprite.rect.width / _meImage.sprite.rect.height;
-
-        // Calculate the new size based on the maximum width and height
-        float newWidth = Mathf.Min(maxWidth, _meImage.sprite.rect.width);
-
-        if (newWidth < maxWidth)
-        {
-            newWidth = maxWidth;
-        }
-
+        float aspectRatio = image.sprite.rect.width / image.sprite.rect.height;
+        float newWidth = maxWidth;
         float newHeight = newWidth / aspectRatio;
-        //Debug.Log(newWidth + " new Width " + _sliderDataList.id);
-
-        //if (newHeight > maxHeight)
-        //{
-        //    newHeight = maxHeight;
-        //    newWidth = newHeight * aspectRatio;
-        //    //Debug.Log(newHeight + " new Hight " + _sliderDataList.id);
-        //}
-
-
-        // Set the size
-        RectTransform rectTransform = _meImage.rectTransform;
-        rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
+        image.rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
     }
 }

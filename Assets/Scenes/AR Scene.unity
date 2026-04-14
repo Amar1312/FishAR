@@ -1233,6 +1233,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89526800}
   m_CullTransparentMesh: 1
+--- !u!1 &122603188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 122603190}
+  - component: {fileID: 122603189}
+  m_Layer: 0
+  m_Name: ARCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &122603189
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122603188}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &122603190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122603188}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141635517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,6 +1517,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: 
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 0}
   _lockBtn: {fileID: 491673100}
@@ -1541,6 +1631,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: Goldfish 4
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 21300000, guid: 8de71a238ed9b264db68bb0ffb5f1d34, type: 3}
   _lockBtn: {fileID: 1387640147}
@@ -3674,7 +3771,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -6}
-  m_SizeDelta: {x: 80, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &480161557
 MonoBehaviour:
@@ -4006,6 +4103,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: Koifish 2
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 1
     fishImage: {fileID: 21300000, guid: a47b0819141b67e48904457502054fa1, type: 3}
   _lockBtn: {fileID: 213495481}
@@ -4207,7 +4311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -290, y: -57}
+  m_AnchoredPosition: {x: -245, y: -57}
   m_SizeDelta: {x: 90, y: 130}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &549160509
@@ -5147,6 +5251,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654034383}
   m_CullTransparentMesh: 1
+--- !u!1 &672922899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 672922903}
+  - component: {fileID: 672922902}
+  - component: {fileID: 672922901}
+  - component: {fileID: 672922900}
+  m_Layer: 5
+  m_Name: Logo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &672922900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672922899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &672922901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672922899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1080, y: 1920}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &672922902
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672922899}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &672922903
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672922899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2140337202}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &692450277
 GameObject:
   m_ObjectHideFlags: 0
@@ -5333,6 +5539,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: 
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 0}
   _lockBtn: {fileID: 2101925889}
@@ -6218,6 +6431,7 @@ GameObject:
   - component: {fileID: 769978592}
   - component: {fileID: 769978591}
   - component: {fileID: 769978590}
+  - component: {fileID: 769978594}
   m_Layer: 5
   m_Name: Camera Button
   m_TagString: Untagged
@@ -6244,7 +6458,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 188.4, y: 185}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &769978590
 MonoBehaviour:
@@ -6289,19 +6503,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 769978591}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1356216927}
-        m_TargetAssemblyTypeName: Amar.TakePicture, Assembly-CSharp
-        m_MethodName: TakeCameraPicture
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &769978591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6315,21 +6517,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.94509804, g: 0.101960786, b: 0.101960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ac049f791a8c4034cbe79f6d5fea0c4c, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &769978592
@@ -6340,6 +6542,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769978588}
   m_CullTransparentMesh: 1
+--- !u!114 &769978594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769978588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b965b03b00b4142f2b98bde7231016df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDuration: 15
+  countdown: {fileID: 769978591}
+  onTouchDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1494832564}
+        m_TargetAssemblyTypeName: ARRecorder, Assembly-CSharp
+        m_MethodName: StartRecording
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTouchUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1494832564}
+        m_TargetAssemblyTypeName: ARRecorder, Assembly-CSharp
+        m_MethodName: StopRecording
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  takePicture: {fileID: 1356216927}
 --- !u!1 &782992587
 GameObject:
   m_ObjectHideFlags: 0
@@ -7344,6 +7591,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: Normalfish
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 2
     fishImage: {fileID: 21300000, guid: bca37f3eb87a22149bdef6115a34344b, type: 3}
   _lockBtn: {fileID: 1314572830}
@@ -7416,7 +7670,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1598178752}
   m_Father: {fileID: 894584828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -7451,15 +7706,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.16078432, g: 0.14509805, b: 0.14117648, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 89b1f008bbf5c094f9830b28966c5fff, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 98257ce5f0f5491419a1a9d14bad67e1, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7467,7 +7722,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.01
 --- !u!222 &892208616
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7489,7 +7744,7 @@ GameObject:
   - component: {fileID: 894584830}
   - component: {fileID: 894584829}
   m_Layer: 5
-  m_Name: Share Button
+  m_Name: Delete Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7513,7 +7768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 290, y: -57}
+  m_AnchoredPosition: {x: 245, y: -57}
   m_SizeDelta: {x: 90, y: 130}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &894584829
@@ -7580,7 +7835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: a1f0628111b762a4ba22cea2c8d05a7a, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7824,6 +8079,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987107481}
   m_CullTransparentMesh: 1
+--- !u!1 &995990538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 995990539}
+  - component: {fileID: 995990542}
+  - component: {fileID: 995990541}
+  - component: {fileID: 995990540}
+  m_Layer: 5
+  m_Name: CameraIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &995990539
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995990538}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1352663027}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 250, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &995990540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995990538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
+--- !u!114 &995990541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995990538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 66bc839565b318c40bbec421be469371, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &995990542
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995990538}
+  m_CullTransparentMesh: 1
 --- !u!1 &997315518
 GameObject:
   m_ObjectHideFlags: 0
@@ -7917,7 +8262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1003772430
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9283,6 +9628,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: Red Oranda
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 21300000, guid: 6fa97707d349ef44d97b4eec847b4ad4, type: 3}
   _lockBtn: {fileID: 654034385}
@@ -10523,7 +10875,7 @@ GameObject:
   - component: {fileID: 1352663029}
   - component: {fileID: 1352663028}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BackGroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10540,13 +10892,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 995990539}
   m_Father: {fileID: 769978589}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 265, y: 0}
+  m_SizeDelta: {x: 175, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1352663028
 MonoBehaviour:
@@ -10575,14 +10928,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.16078432, g: 0.14509805, b: 0.14117648, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 66bc839565b318c40bbec421be469371, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 920acb3bfe69154468ca2bd58f1a358a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10653,12 +11006,20 @@ PrefabInstance:
       value: PrefebTakePicture
       objectReference: {fileID: 0}
     - target: {fileID: 7221804578559560543, guid: 05046c3d188a3df47814f2c321c6cb27, type: 3}
+      propertyPath: logo
+      value: 
+      objectReference: {fileID: 672922899}
+    - target: {fileID: 7221804578559560543, guid: 05046c3d188a3df47814f2c321c6cb27, type: 3}
+      propertyPath: _logoImage
+      value: 
+      objectReference: {fileID: 2140337203}
+    - target: {fileID: 7221804578559560543, guid: 05046c3d188a3df47814f2c321c6cb27, type: 3}
+      propertyPath: _logoPanel
+      value: 
+      objectReference: {fileID: 672922899}
+    - target: {fileID: 7221804578559560543, guid: 05046c3d188a3df47814f2c321c6cb27, type: 3}
       propertyPath: _pointAmount
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7221804578559560543, guid: 05046c3d188a3df47814f2c321c6cb27, type: 3}
-      propertyPath: _DeactiveCanvas.Array.size
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7221804578559560543, guid: 05046c3d188a3df47814f2c321c6cb27, type: 3}
       propertyPath: '_DeactiveCanvas.Array.data[0]'
@@ -10692,7 +11053,7 @@ GameObject:
   - component: {fileID: 1360146078}
   - component: {fileID: 1360146077}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: videoSaveMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10712,10 +11073,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 769978589}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 300.5}
+  m_SizeDelta: {x: 313, y: 107.41005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360146077
 MonoBehaviour:
@@ -10737,17 +11098,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Video Save In Gallery...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4bd810f1cbcb0f446a8f5a31453e243f, type: 2}
+  m_sharedMaterial: {fileID: 21539420542967178, guid: 4bd810f1cbcb0f446a8f5a31453e243f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11259,6 +11620,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: Goldfish 1
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 21300000, guid: e860db4f42e51a140a21835276bf6b88, type: 3}
   _lockBtn: {fileID: 739312123}
@@ -11602,6 +11970,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: Koifish 1
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 1
     fishImage: {fileID: 21300000, guid: 7b297a1b5075e4a4bb9bab5de2ed05f4, type: 3}
   _lockBtn: {fileID: 1345830008}
@@ -11734,6 +12109,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490244355}
   m_CullTransparentMesh: 1
+--- !u!1 &1494832562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1494832563}
+  - component: {fileID: 1494832564}
+  m_Layer: 0
+  m_Name: ARRecordar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1494832563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494832562}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1494832564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494832562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17212bf6cb299e0448af02bd10b59c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoCamera: {fileID: 122603189}
+  videoWidth: 720
+  VideoMessage: {fileID: 1360146075}
 --- !u!1 &1536766481
 GameObject:
   m_ObjectHideFlags: 0
@@ -11889,6 +12311,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: Koifish 3
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 1
     fishImage: {fileID: 21300000, guid: d1d8041411cb41a4a839cd0abd24999e, type: 3}
   _lockBtn: {fileID: 1291856069}
@@ -12208,6 +12637,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: Goldfish 3
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 21300000, guid: 6c3b9449ee905a747b451e54ba67101f, type: 3}
   _lockBtn: {fileID: 89526802}
@@ -12792,6 +13228,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597603947}
   m_CullTransparentMesh: 1
+--- !u!1 &1598178751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1598178752}
+  - component: {fileID: 1598178755}
+  - component: {fileID: 1598178754}
+  - component: {fileID: 1598178753}
+  m_Layer: 5
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1598178752
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598178751}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 892208613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -15.099983}
+  m_SizeDelta: {x: 48.2, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1598178753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598178751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
+--- !u!114 &1598178754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598178751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9254902, g: 0.9254902, b: 0.9254902, a: 0.6666667}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 79a328b337a58fc4182aae08ef650804, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 0.01
+--- !u!222 &1598178755
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598178751}
+  m_CullTransparentMesh: 1
 --- !u!1 &1635705526
 GameObject:
   m_ObjectHideFlags: 0
@@ -12947,6 +13473,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: 
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 0}
   _lockBtn: {fileID: 692450279}
@@ -13685,6 +14218,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: 
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 0}
   _lockBtn: {fileID: 1309072671}
@@ -14229,7 +14769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Share
+  m_text: Delete
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8adfbfea3f7a64b40abfd37b88ce31d5, type: 2}
   m_sharedMaterial: {fileID: -3977771094409496905, guid: 8adfbfea3f7a64b40abfd37b88ce31d5, type: 2}
@@ -14463,6 +15003,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: Koifish 4
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 1
     fishImage: {fileID: 21300000, guid: c43dcc4677710054483067c31f980713, type: 3}
   _lockBtn: {fileID: 1315655725}
@@ -14570,6 +15117,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: Goldfish 2
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 21300000, guid: 90367f8c80d255f419365274f8830eb5, type: 3}
   _lockBtn: {fileID: 1877596744}
@@ -14987,7 +15541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2028198806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15577,7 +16131,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -6}
-  m_SizeDelta: {x: 80, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2068392618
 MonoBehaviour:
@@ -16449,6 +17003,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122288237}
+  m_CullTransparentMesh: 1
+--- !u!1 &2140337201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2140337202}
+  - component: {fileID: 2140337204}
+  - component: {fileID: 2140337203}
+  m_Layer: 5
+  m_Name: Bottom Bar Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2140337202
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140337201}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 672922903}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 202, y: 65}
+  m_SizeDelta: {x: 250, y: 200}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &2140337203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140337201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: cad43127f1b2c3b4a9c033be80965cd5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2140337204
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140337201}
   m_CullTransparentMesh: 1
 --- !u!224 &71457773454805277
 RectTransform:
@@ -19032,6 +19661,13 @@ MonoBehaviour:
     fevarit: 0
     tag: 0
     fishName: 
+    fishDetail: 
+    funFact: 
+    availability: 
+    fishType: 
+    fishoptimalTemperature: 
+    canfishSurviveIn: 
+    fishMaxSize: 
     category: 0
     fishImage: {fileID: 0}
   _fishImage: {fileID: 3425810708634973288}
@@ -19277,10 +19913,13 @@ SceneRoots:
   m_Roots:
   - {fileID: 1329022236}
   - {fileID: 178698053}
+  - {fileID: 122603190}
   - {fileID: 240143383}
   - {fileID: 2050247268}
   - {fileID: 1356216926}
   - {fileID: 1441554900}
   - {fileID: 1267246963}
+  - {fileID: 672922903}
   - {fileID: 277291111}
   - {fileID: 878300699}
+  - {fileID: 1494832563}

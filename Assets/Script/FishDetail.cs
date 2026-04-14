@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class FishDetail : MonoBehaviour
 {
@@ -16,11 +17,13 @@ public class FishDetail : MonoBehaviour
     public int _fishUnlockPoint;
     public TextMeshProUGUI _fishName;
     public Image _fishImage;
+    public List<GameObject> temp = new List<GameObject>();
 
     private void OnEnable()
     {
-        PointManager _pointManager = PointManager.Instance;
-        if (_pointManager._unLockFishID.Contains(_fishID) || _fishID == 0)
+        //PointManager _pointManager = PointManager.Instance;
+        UserData user = UserSaveManager.Load();
+        if (user.fishFullSaveData.unlockedFishIDs.Contains(_fishID) || _fishID == 0)
         {
             UnLockDone();
         }
@@ -29,7 +32,7 @@ public class FishDetail : MonoBehaviour
             LockOn();
         }
 
-        if (_pointManager._likeFishID.Contains(_fishID))
+        if (user.fishFullSaveData.favoriteFishIDs.Contains(_fishID))
         {
             _fishDetail.fevarit = true;
             _likeImage.sprite = _likeSprite;
@@ -50,6 +53,19 @@ public class FishDetail : MonoBehaviour
 
         _fishName.text = _fishDetail.fishName;
         _fishImage.sprite = _fishDetail.fishImage;
+        for (int i = 0;i<temp.Count;i++)
+        {
+            Debug.Log(temp[i].gameObject.name);
+            if (_fishDetail.availability == temp[i].gameObject.name)
+            {
+                Debug.Log("tep on"+temp[i].gameObject.name);
+                temp[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                temp[i].gameObject.SetActive(false);
+            }
+        }
     }
 
     void UnLockBtnClick()

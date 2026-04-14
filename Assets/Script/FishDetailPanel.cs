@@ -13,13 +13,20 @@ public class FishDetailPanel : MonoBehaviour
     public FishAllDetail _fishDetail;
 
     public TextMeshProUGUI _fishNameText;
+    public TextMeshProUGUI _fishDetailText;
+    public TextMeshProUGUI _funfactText;
+    public TextMeshProUGUI _availabilityText;
+    public TextMeshProUGUI _fishTypeText;
+    public TextMeshProUGUI _fishOptimalTempText;
+    public TextMeshProUGUI _fishMaxSizeText;
     public Image _fishImage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void OnEnable()
     {
-        PointManager _pointManager = PointManager.Instance;
-        if (_pointManager._unLockFishID.Contains(_fishId))
+        //PointManager _pointManager = PointManager.Instance;
+        UserData user = UserSaveManager.Load();
+        if (user.fishFullSaveData.unlockedFishIDs.Contains(_fishId))
         {
             _addToCollectBtn.gameObject.SetActive(false);
         }
@@ -31,7 +38,15 @@ public class FishDetailPanel : MonoBehaviour
 
         _fishImage.sprite = _fishDetail.fishImage;
         _fishNameText.text = _fishDetail.fishName;
+        _fishDetailText.text = _fishDetail.fishDetail;
+        _fishTypeText.text = _fishDetail.fishType;
+        _funfactText.text = _fishDetail.funFact;
+        _availabilityText.text = _fishDetail.availability;
+        _fishOptimalTempText.text = _fishDetail.fishoptimalTemperature;
+        _fishMaxSizeText.text = _fishDetail.fishMaxSize;
     }
+
+
 
     void Start()
     {

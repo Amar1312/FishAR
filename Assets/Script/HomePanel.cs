@@ -21,6 +21,17 @@ public class HomePanel : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    void ShopOwnerResponce1(ShopOwnerResponce responce)
+    {
+        if (responce.status)
+        {
+            PointManager.Instance._shopOwnerResponce = responce;
+            PointManager.Instance.Loadimage(PointManager.Instance._shopOwnerResponce.result.logo, _logoImage, 850f);
+
+            //SceneManager.LoadScene(0);
+        }
+    }
+
     public void ExploreFishBtnClick()
     {
         HomeSceneManager.Instance._allFishScript.gameObject.SetActive(true);
@@ -36,11 +47,28 @@ public class HomePanel : MonoBehaviour
     {
         PointManager _pointManager = PointManager.Instance;
 
-        if (string.IsNullOrWhiteSpace(_pointManager._shopOwnerResponce.result.logo))
+        if (PlayerPrefs.HasKey("QRC") && string.IsNullOrWhiteSpace(_pointManager._shopOwnerResponce.result.logo))
         {
-            return;
+            string _qrCode = PlayerPrefs.GetString("QRC");
+
+            if (_qrCode != null || _qrCode == "")
+            {
+                APIManager.Instance.ShopOwnerIn(_qrCode, ShopOwnerResponce1);
+            }
+        }
+        else
+        {
+
+            if (string.IsNullOrWhiteSpace(_pointManager._shopOwnerResponce.result.logo))
+            {
+                return;
+            }
+
+            _pointManager.Loadimage(_pointManager._shopOwnerResponce.result.logo, _logoImage, 850f);
         }
 
-        _pointManager.Loadimage(_pointManager._shopOwnerResponce.result.logo, _logoImage, 850f);
+       
+
+
     }
 }

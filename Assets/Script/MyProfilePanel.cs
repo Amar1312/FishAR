@@ -8,14 +8,18 @@ public class MyProfilePanel : MonoBehaviour
     public Button _arBtn, _homeBtn, _exploreBtn, _aquariumBtn;
     public TextMeshProUGUI _mainLevelText, _totalPerText, _totalFishCollectText, _pointText;
     public TextMeshProUGUI _levelExplorerText, _fishCollectText, _levelPerText;
+    public TextMeshProUGUI _userName;
     public Scrollbar _collectScrollbar;
+
+    private UserData user;
 
     private void OnEnable()
     {
+        // Reload fresh user data every time the panel is shown
+        user = UserSaveManager.Load();
         DisplayData();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _arBtn.onClick.AddListener(ArBtnClick);
@@ -49,40 +53,37 @@ public class MyProfilePanel : MonoBehaviour
 
     void DisplayData()
     {
-        PointManager _pointManager = PointManager.Instance;
-        _pointText.text = _pointManager._point.ToString();
+        // Write data TO the UI — never read from UI text fields
+        _userName.text = user.userName;
+        _pointText.text = user.points.ToString();
+
         int totalFish = HomeSceneManager.Instance._myCollectionScript._allFishComponent.Count;
-        int unLockFish = _pointManager._unLockFishID.Count;
+        int unLockFish = user.fishFullSaveData.unlockedFishIDs.Count;
 
-        float Data = (float)unLockFish / totalFish;
-        float per = Data * 100;
-        string result = per.ToString("F1");
-        _totalPerText.text = result + " %";
+        float data = totalFish > 0 ? (float)unLockFish / totalFish : 0f;
+        float per = data * 100f;
+        _totalPerText.text = per.ToString("F1") + " %";
+        _totalFishCollectText.text = "Total " + unLockFish + " / " + totalFish + " Fish Collected";
 
-        _totalFishCollectText.text = "Total " + unLockFish.ToString() + " / " + totalFish.ToString() + " Fish Collected";
         SetLevelData();
     }
+
     void SetLevelData()
     {
-        int colloctData = PointManager.Instance._unLockFishID.Count;
-        int num;
-        int Level;
+        int collectedCount = user.fishFullSaveData.unlockedFishIDs.Count;
+        const int groupSize = 5;
 
-        int groupSize = 5;
+        // Guard against zero collected fish to avoid negative level/num
+        int level = collectedCount == 0 ? 1 : (collectedCount - 1) / groupSize + 1;
+        int num   = collectedCount == 0 ? 0 : (collectedCount - 1) % groupSize + 1;
 
-        Level = (colloctData - 1) / groupSize + 1;
-        num = (colloctData - 1) % groupSize + 1;
+        _levelExplorerText.text = "Level " + level + " Explorer";
+        _mainLevelText.text = "Level " + level;
+        _fishCollectText.text = num + " / " + groupSize + " Fish Collected";
 
-        _levelExplorerText.text = "Level " + Level.ToString() + " Explorer";
-        _mainLevelText.text = "Level " + Level.ToString();
-
-        _fishCollectText.text = num.ToString() + " / " + groupSize.ToString() + " Fish Collected";
-
-        float Data = (float)num / groupSize;
-        _collectScrollbar.size = Data;
-        float per = Data * 100;
-        string result = per.ToString("F1");
-
-        _levelPerText.text = "Level " + Level.ToString() + " at " + result + " %";
+        float data = (float)num / groupSize;
+        _collectScrollbar.size = data;
+        _levelPerText.text = "Level " + level + " at " + (data * 100f).ToString("F1") + " %";
     }
 }
+

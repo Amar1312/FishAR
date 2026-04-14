@@ -3,14 +3,18 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
 public class AllFishPanel : MonoBehaviour
 {
     public Button _arBtn, _homeBtn, _aquariumBtn, _profileBtn;
     public TextMeshProUGUI _pointText;
+    
 
     private void OnEnable()
     {
-        _pointText.text = PointManager.Instance._point.ToString();
+        // Simply display the current saved points — never add to them here
+        UserData user = UserSaveManager.Load();
+        _pointText.text = user.points.ToString();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,6 +24,8 @@ public class AllFishPanel : MonoBehaviour
         _aquariumBtn.onClick.AddListener(AquariumBtnClick);
         _profileBtn.onClick.AddListener(ProfileBtnClick);
         _homeBtn.onClick.AddListener(HomeBtnClick);
+
+
     }
 
     void ArBtnClick()

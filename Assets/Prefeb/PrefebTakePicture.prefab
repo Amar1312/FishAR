@@ -46,8 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Screeshot: {fileID: 7221804578565517529}
+  logo: {fileID: 0}
   _image: {fileID: 7221804578925238108}
-  _DeactiveCanvas: []
+  _DeactiveCanvas:
+  - {fileID: 0}
+  _pointAmount: 100
 --- !u!1 &7221804578565517529
 GameObject:
   m_ObjectHideFlags: 0
