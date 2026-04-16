@@ -96,6 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3729812963145082096}
   - component: {fileID: 8290887185208143140}
+  - component: {fileID: 8710042665534039986}
   m_Layer: 0
   m_Name: Fish Movement
   m_TagString: Untagged
@@ -132,20 +133,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
+  turnSpeed: 2
   reachThreshold: 0.1
   areaCenter: {x: 0, y: 0.17, z: 0}
   areaSize: {x: 1, y: 0.5, z: 0.6}
-  rayDistance: 1.5
+  detectDistance: 2
+  sphereRadius: 0.3
   obstacleLayers:
     serializedVersion: 2
     m_Bits: 128
-  _parentObject: {fileID: 643446150446714002}
-  _offset: {x: 0, y: 0.17, z: 0}
   restrictedLayer:
     serializedVersion: 2
     m_Bits: 256
-  spawnCheckRadius: 0.1
   boundaryDetectDistance: 1
+  _parentObject: {fileID: 643446150446714002}
+  _offset: {x: 0, y: 0.17, z: 0}
+--- !u!135 &8710042665534039986
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5938386404249672296}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.02
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &7349673771065035282
 PrefabInstance:
   m_ObjectHideFlags: 0

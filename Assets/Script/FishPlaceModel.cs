@@ -105,8 +105,9 @@ public class FishPlaceModel : MonoBehaviour
 
     public void OnEffect()
     {
-        if (_waterEffect != null)
+        if (_waterEffect != null && PointManager.scene==1)
         {
+            UIManager.Instance.OnFishInstantiate(true, Camera.main.transform);
             _waterEffect.SetActive(true);
             Invoke(nameof(OffEffect), 3f);
             AudioManager.Instance.PlayWaterSplash();
@@ -116,5 +117,6 @@ public class FishPlaceModel : MonoBehaviour
     void OffEffect()
     {
         _waterEffect.SetActive(false);
+        UIManager.Instance.OnFishInstantiate(false, this.transform);
     }
 }

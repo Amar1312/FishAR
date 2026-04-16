@@ -1,0 +1,33 @@
+# Keep Unity classes
+-keep class com.unity3d.player.** { *; }
+
+# Keep NativeGallery classes
+-keep class com.yasirkula.unity.** { *; }
+
+# Keep ARCore classes
+-keep class com.google.ar.core.** { *; }
+
+# Keep NatSuite classes
+-keep class com.natsuite.** { *; }
+
+# Suppress warnings for duplicate classes
+-dontwarn androidx.core.**
+-dontwarn com.yasirkula.unity.**
+-dontwarn com.google.ar.core.**
+
+# Keep native methods
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+# Keep Parcelable implementations
+-keepclassmembers class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+
+# Remove logging in release builds
+-assumenosideeffects class android.util.Log {
+    public static *** v(...);
+    public static *** d(...);
+    public static *** i(...);
+}

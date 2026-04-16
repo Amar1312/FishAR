@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class FishSearch : MonoBehaviour
 {
-    public Button _allSpeciesBtn, _saltwaterBtn, _freshwaterBtn, _likeBtn;
+    public Button _allSpeciesBtn, _koiFish, _fGoldFish,_goldFish,_normalFish, _likeBtn;
     public List<GameObject> _selectBtnImage;
     public List<GameObject> _fishComponent;
     public TMP_InputField _searchInputField;
@@ -21,8 +21,10 @@ public class FishSearch : MonoBehaviour
     void Start()
     {
         _allSpeciesBtn.onClick.AddListener(AllSpeciesBtnClick);
-        _saltwaterBtn.onClick.AddListener(SaltwaterBtnClick);
-        _freshwaterBtn.onClick.AddListener(FreshwaterBtnClick);
+        _koiFish.onClick.AddListener(koiFshClick);
+        _fGoldFish.onClick.AddListener(FGoldFishClick);
+        _goldFish.onClick.AddListener(GoldFishClick);
+        _normalFish.onClick.AddListener(NormalFish);
         _searchInputField.onValueChanged.AddListener(OnSearchValueChanged);
         _likeBtn.onClick.AddListener(LikeBtnClick);
 
@@ -41,17 +43,29 @@ public class FishSearch : MonoBehaviour
         OnSelectImage(0);
     }
 
-    void SaltwaterBtnClick()
+    void koiFshClick()
     {
-        OnTagFish(tagType.Saltwater);
+        OnTagFish("KoiFish");
         OnSelectImage(1);
     }
 
-    void FreshwaterBtnClick()
+    void FGoldFishClick()
     {
-        OnTagFish(tagType.Freshwater);
+        OnTagFish("FGoldFish");
         OnSelectImage(2);
     }
+
+    void GoldFishClick()
+    {
+        OnTagFish("GoldFish");
+        OnSelectImage(3);
+    }
+    void NormalFish()
+    {
+        OnTagFish("NormalFish");
+        OnSelectImage(4);
+    }
+
 
     void OnAllFish()
     {
@@ -61,14 +75,15 @@ public class FishSearch : MonoBehaviour
         }
     }
 
-    void OnTagFish(tagType tag)
+    void OnTagFish(string tag)
     {
         for (int i = 0; i < _fishComponent.Count; i++)
         {
             if (_fishComponent[i].TryGetComponent<FishDetail>(out FishDetail detail))
             {
-                tagType type = detail._fishDetail.tag;
-                if (type == tag)
+                CategoryType type = detail._fishDetail.category;
+                string typeString = type.ToString();
+                if (typeString == tag)
                 {
                     _fishComponent[i].SetActive(true);
                 }
@@ -82,7 +97,7 @@ public class FishSearch : MonoBehaviour
 
     void LikeBtnClick()
     {
-        OnSelectImage(3);
+        OnSelectImage(5);
         for (int i = 0; i < _fishComponent.Count; i++)
         {
             if (_fishComponent[i].TryGetComponent<FishDetail>(out FishDetail detail))

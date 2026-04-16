@@ -36,6 +36,7 @@ public class HomePanel : MonoBehaviour
     {
         HomeSceneManager.Instance._allFishScript.gameObject.SetActive(true);
         gameObject.SetActive(false);
+        HomeSceneManager.Instance.TutorialPanelOn(0);
     }
 
     void QrBtnClick()

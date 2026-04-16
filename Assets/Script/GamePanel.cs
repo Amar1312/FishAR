@@ -16,6 +16,7 @@ public class GamePanel : MonoBehaviour
 
     void BackBtnClick()
     {
+       PointManager.scene = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 

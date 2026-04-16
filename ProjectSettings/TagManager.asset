@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - base
+  - Container
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - 
   - FishObstacle
   - RestrictedArea
-  - 
+  - Base
   - 
   - 
   - 

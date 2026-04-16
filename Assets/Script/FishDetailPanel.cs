@@ -1,7 +1,8 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class FishDetailPanel : MonoBehaviour
 {
@@ -20,12 +21,15 @@ public class FishDetailPanel : MonoBehaviour
     public TextMeshProUGUI _fishOptimalTempText;
     public TextMeshProUGUI _fishMaxSizeText;
     public Image _fishImage;
+    public GameObject _fishModel;
+    private FishSpawnData _currentFishData;
+    GameObject fishInstantiate;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void OnEnable()
     {
-        //PointManager _pointManager = PointManager.Instance;
         UserData user = UserSaveManager.Load();
+
         if (user.fishFullSaveData.unlockedFishIDs.Contains(_fishId))
         {
             _addToCollectBtn.gameObject.SetActive(false);
@@ -34,6 +38,7 @@ public class FishDetailPanel : MonoBehaviour
         {
             _addToCollectBtn.gameObject.SetActive(true);
         }
+
         _unlockPointText.text = _fishUnlockPoint.ToString();
 
         _fishImage.sprite = _fishDetail.fishImage;
@@ -44,10 +49,34 @@ public class FishDetailPanel : MonoBehaviour
         _availabilityText.text = _fishDetail.availability;
         _fishOptimalTempText.text = _fishDetail.fishoptimalTemperature;
         _fishMaxSizeText.text = _fishDetail.fishMaxSize;
+
+
+        var fishData = DataContainerManager.Instance._fishData
+           
+     .Find(x => x.fishID == _fishId);
+
+        _currentFishData = fishData;
+
+        if (fishData == null || fishData._placeFishPrefab == null)
+        {
+            Debug.LogError("FishData or prefab missing for ID: " + _fishId);
+            return;
+        }
+
+        if (_fishModel == null)
+        {
+            Debug.LogError("_fishModel is NULL!");
+            return;
+        }
+
+        // ✅ STORE transform first
+        GameObject fishInstantiate = Instantiate(
+    fishData._placeFishDetailPrefab) as GameObject;
+        fishInstantiate.transform.SetParent(_fishModel.transform, false);
+
+
+
     }
-
-
-
     void Start()
     {
         _arBtn.onClick.AddListener(ArBtnClick);
@@ -101,5 +130,10 @@ public class FishDetailPanel : MonoBehaviour
     private void OnDisable()
     {
         HomeSceneManager.Instance._unlockScript.gameObject.SetActive(false);
+        foreach (Transform child in _fishModel.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
     }
 }

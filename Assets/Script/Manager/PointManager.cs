@@ -13,6 +13,8 @@ public class PointManager : Singleton<PointManager>
     public List<int> _unLockFishID = new List<int>();
     public List<int> _categoryComplete = new List<int>();
     public List<int> _likeFishID = new List<int>();
+    public static int scene,_timeopenApp;
+    
 
     void Start()
     {
@@ -22,7 +24,20 @@ public class PointManager : Singleton<PointManager>
         _unLockFishID = new List<int>(user.fishFullSaveData.unlockedFishIDs);
         _likeFishID = new List<int>(user.fishFullSaveData.favoriteFishIDs);
         _categoryComplete = LoadIntList("CategoryData");
+        if(PlayerPrefs.HasKey("OpenAppTime"))
+        {
+              _timeopenApp = PlayerPrefs.GetInt("OpenAppTime") + 1;
+               PlayerPrefs.SetInt("OpenAppTime", _timeopenApp);
+        }
+        else
+        {
+                PlayerPrefs.SetInt("OpenAppTime", 1);
+            Debug.Log("First time opening app, setting OpenAppTime to 1" + PlayerPrefs.GetInt("OpenAppTime"));
+        }
+
+            Invoke("VideoImageM", 1f);
     }
+ 
 
     /// <summary>Adds the given amount to the player's points and persists.</summary>
     public void AddPoint(int point)

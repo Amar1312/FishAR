@@ -16,7 +16,7 @@ public class ARRecorder : MonoBehaviour
     private CameraInput cameraInput;
     private string lastVideoPath;
     //public VideoPlayerManager _VideoPlayerManager;
-    public GameObject VideoMessage,_coinAnimation,logoParent,logodisable;
+    public GameObject VideoMessage,_coinAnimation,logoParent,logodisable,_recordingText;
 
 
     public void StartRecording()
@@ -36,6 +36,7 @@ public class ARRecorder : MonoBehaviour
         //            cameraInput.frameInput = new GLESRenderTextureInput(recorder, multithreading: true);
         //        else if (Application.platform ==  RuntimePlatform.IPhonePlayer)
         //            cameraInput.frameInput = new MTLRenderTextureInput(recorder, multithreading: true);
+        _recordingText.SetActive(true);
         if (Screen.orientation == ScreenOrientation.Portrait)
             Screen.orientation = ScreenOrientation.Portrait;
         else if (Screen.orientation == ScreenOrientation.LandscapeLeft)
@@ -51,6 +52,7 @@ public class ARRecorder : MonoBehaviour
     {
         // Stop camera input and recorder
         cameraInput.Dispose();
+        _recordingText.SetActive(false);
         lastVideoPath = await recorder.FinishWriting();
         NativeGallery.SaveVideoToGallery(lastVideoPath, Application.productName,
             "ScreenRecord_" + Application.productName + Random.Range(1000, 10000));
@@ -68,10 +70,23 @@ public class ARRecorder : MonoBehaviour
     void OffVideoMessage()
     {
         //VideoMessage.SetActive(false);
+        PointManager.Instance.AddPoint(100);
+        UIManager.Instance.DisplayPoint();
         _coinAnimation.SetActive(false);
         logoParent.SetActive(false);
         logodisable.SetActive(true);
+        Invoke ("Message",0.2f);
+
     }
-    
+    void Message()
+    {
+        VideoMessage.SetActive(true);
+        Invoke("OffMessage", 2f);
+    }
+    void OffMessage()
+    {
+        VideoMessage.SetActive(false);
+    }
+
     //public UnityEvent VideoRecordingDone;
 }

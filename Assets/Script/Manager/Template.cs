@@ -64,7 +64,7 @@ public enum tagType
 }
 public enum CategoryType
 {
-    GoldFish, KoiFish, FGoldFish, NormalFish
+    GoldFish, KoiFish, FGoldFish, NormalFish,Container
 }
 
 [Serializable]
@@ -75,6 +75,7 @@ public class FishSpawnData
     /// <summary>Cost in points required to unlock this fish. Set in Inspector — never overwritten at runtime.</summary>
     public int fishUnlockCost;
     public GameObject _placeFishPrefab;
+    public GameObject _placeFishDetailPrefab;
 }
 
 [Serializable]

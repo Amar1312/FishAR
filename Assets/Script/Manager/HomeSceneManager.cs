@@ -1,7 +1,8 @@
 using System;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class HomeSceneManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class HomeSceneManager : MonoBehaviour
     public UnlockPopupHomePanel _unlockScript;
     public MyCollectionPanel _myCollectionScript;
     public MyProfilePanel _profileScript;
+    public GameObject videoImage;
     
 
     [Space]
@@ -31,6 +33,8 @@ public class HomeSceneManager : MonoBehaviour
 
     public Transform _collectionContainer;
     public CollectionFishComponent _collectionPanelPrefab;
+    public GameObject tutorialPanel;
+    public GameObject[] panels; 
 
 
     private void Awake()
@@ -66,22 +70,42 @@ public class HomeSceneManager : MonoBehaviour
             fishcolle._fishId = _dataManager._fishData[i].fishID;
             fishcolle._fishUnlockPoint = _dataManager._fishData[i].fishUnlockCost;
             _myCollectionScript._allFishComponent.Add(fishcolle);
+
+        }
+        videoImage.SetActive(false );
+        if (PointManager.scene ==  1  )
+        {
+            
+            videoImage.SetActive(true);
         }
 
 
-        Invoke(nameof(CheckDailyCall), 2f);
+
+        if (!PlayerPrefs.HasKey("OpenAppTime"))
+        {
+            Debug.Log("OpenAppTime Key Exists" + PlayerPrefs.GetInt("OpenAppTime"));
+           
+                Debug.Log("OpenAppTime is " + PlayerPrefs.GetInt("OpenAppTime"));
+                tutorialPanel.SetActive(true);
+          
+        }
+     
+            Invoke(nameof(CheckDailyCall), 2f);
     }
 
     public void FishDetailPanelOn()
     {
         _fishDetailScript.gameObject.SetActive(true);
         _allFishScript.gameObject.SetActive(false);
+        TutorialPanelOn(1);
+
     }
 
     public void MyCollectionPanelOn()
     {
         _myCollectionScript.gameObject.SetActive(true);
         _fishDetailScript.gameObject.SetActive(false);
+        //TutorialPanelOn(0);
     }
 
 
@@ -96,6 +120,11 @@ public class HomeSceneManager : MonoBehaviour
             DailyMethod();
 
             PlayerPrefs.SetString("LastDailyCallDate", todayDate);
+        }
+        if(PointManager.scene == 1)
+        {
+            videoImage.SetActive(false);
+            PointManager.scene = 0;
         }
     }
 
@@ -118,9 +147,53 @@ public class HomeSceneManager : MonoBehaviour
         _dailyPopup.SetActive(false);
         _coinAnimationPanel.SetActive(false);
     }
-
-    private void OnDisable()
+    public void TutorialPanelOn(int panel)
     {
-        OffDailyPopup();
+      
+               
+                for(int i = 0; i < panels.Length; i++)
+                {
+                    if(i == panel)
+                    {
+                        panels[i].SetActive(true);
+                    }
+                    else
+                    {
+                        panels[i].SetActive(false);
+                    }
+                }
+
+
+       
+
     }
+    public void TutorialPanelOff(int i) {  
+      
+        if (i == 1)
+        {
+            tutorialPanel.SetActive(true);
+            panels[2].SetActive(true);
+            panels[1].SetActive(false);
+
+        }
+        else if (i == 2)
+        {
+            tutorialPanel.SetActive(false);
+            for (int j = 0; j < panels.Length; j++)
+            {
+                panels[j].SetActive(false);
+            }
+        }
+        else
+        {
+            
+            panels[i].SetActive(false);
+        }
+
+    }
+
+    //private void OnDisable()
+    //{
+    //    OffDailyPopup();
+    //}
 }
