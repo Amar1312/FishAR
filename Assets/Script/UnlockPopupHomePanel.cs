@@ -47,7 +47,7 @@ public class UnlockPopupHomePanel : MonoBehaviour
 
             _fishDetail.UnLockDone();
             HomeSceneManager.Instance._fishDetailScript._addToCollectBtn.gameObject.SetActive(false);
-            Invoke(nameof(Offpopup), 5f);
+            Invoke(nameof(Offpopup), 2f);
         }
     }
 

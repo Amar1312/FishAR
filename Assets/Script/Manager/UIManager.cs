@@ -1,8 +1,9 @@
-using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
-using Mihir;
+﻿using Mihir;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -13,7 +14,7 @@ public class UIManager : Singleton<UIManager>
     public List<GameObject> _gamePanel;
     public List<GameObject> _selectedFish = new List<GameObject>();
     private Dictionary<GameObject, Color> _originalColors = new Dictionary<GameObject, Color>();
-    public GameObject _pointAnimation,_tutorialPanel;
+    public GameObject _pointAnimation,_tutorialPanel,_placeAllScollImage,_bottomBarImage;
     public GameObject[] panels;
 
     [Space]
@@ -60,47 +61,67 @@ public class UIManager : Singleton<UIManager>
     }
     void Update()
     {
-        if (Input.touchCount > 0)
+        // Mobile
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Began)
-            {
-                HandleSelection();
-
-            }
+            HandleSelection(Input.GetTouch(0).position, Input.GetTouch(0).fingerId);
         }
+
 #if UNITY_EDITOR
+        // Mouse (Editor)
         if (Input.GetMouseButtonDown(0))
         {
-            HandleSelection();
+            HandleSelection(Input.mousePosition, -1);
         }
-
 #endif
     }
 
 
-
-
-    void HandleSelection()
+    void HandleSelection(Vector2 screenPosition, int fingerId)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        // Ignore UI clicks
+        if (IsPointerOverUI(fingerId))
+        {
+            return;
+        }
 
-        if (!Physics.Raycast(ray, out RaycastHit hit)) return;
+        Ray ray = Camera.main.ScreenPointToRay(screenPosition);
+
+        // If nothing hit → clear selection
+        if (!Physics.Raycast(ray, out RaycastHit hit))
+        {
+            ClearSelection();
+        
+            return;
+        }
 
         GameObject hitObject = hit.collider.gameObject;
         Debug.Log($"Hit: {hitObject.name}");
 
         GameObject target = GetTarget(hitObject);
-        Debug.Log("target game object" + target.name);
 
-        if (target == null) return;
-
-        SelectTarget(target);
+        if (target != null)
+        {
+            Debug.Log("Target game object: " + target.name);
+            SelectTarget(target);
+        }
     }
+
+    bool IsPointerOverUI(int fingerId)
+    {
+        // Touch
+        if (fingerId >= 0)
+        {
+            return EventSystem.current.IsPointerOverGameObject(fingerId);
+        }
+
+        // Mouse
+        return EventSystem.current.IsPointerOverGameObject();
+    }
+
     GameObject GetTarget(GameObject hitObject)
     {
-        Debug.Log("hit object name: " + hitObject.name);
+        Debug.Log("Hit object name: " + hitObject.name);
 
         // Case 1: Fish child clicked
         if (hitObject.name == "Fish Movement" || hitObject.name == "Pond Water1")
@@ -119,11 +140,29 @@ public class UIManager : Singleton<UIManager>
 
     void SelectTarget(GameObject target)
     {
-        if (_selectedFish.Contains(target)) return;
+        // Toggle OFF if already selected
+        if (_selectedFish.Contains(target))
+        {
+            RemoveHighlight(target);
+            _selectedFish.Remove(target);
 
+            Debug.Log($"Deselected: {target.name}");
+
+            _bottomBarImage.SetActive(false);
+            _placeAllScollImage.SetActive(true);
+
+            return;
+        }
+
+        // Select new target
         ClearSelection();
+
         _selectedFish.Add(target);
         Debug.Log($"Selected: {target.name}");
+
+        _placeAllScollImage.SetActive(false);
+        _bottomBarImage.SetActive(true);
+
         HighlightFish(target);
     }
 
@@ -133,14 +172,13 @@ public class UIManager : Singleton<UIManager>
 
         if (renderer != null)
         {
-            // Store original color if not stored
             if (!_originalColors.ContainsKey(target))
             {
-                Debug.Log($"Highlighted: {target.name}");
                 _originalColors[target] = renderer.material.color;
             }
 
-            renderer.material.color = Color.yellow; // highlight color
+            renderer.material.color = Color.yellow;
+            Debug.Log($"Highlighted: {target.name}");
         }
     }
 
@@ -201,6 +239,8 @@ public class UIManager : Singleton<UIManager>
 
     }
 
+
+
     public void OnFishInstantiate(bool status, Transform camTransform)
     {
         if (camTransform == null)
@@ -209,14 +249,12 @@ public class UIManager : Singleton<UIManager>
             return;
         }
 
-        Vector3 spawnPosition = camTransform.position
-                              + camTransform.forward * 10f
-                              + Vector3.up * 1f;
+        Vector3 spawnPosition = camTransform.position + new Vector3(0,0.2f,0);
 
         _pointAnimation.transform.position = spawnPosition;
 
         
-        _pointAnimation.transform.forward = camTransform.forward;
+        _pointAnimation.transform.forward = Camera.main.transform.forward;
 
         _pointAnimation.SetActive(status);
 
@@ -230,8 +268,7 @@ public class UIManager : Singleton<UIManager>
     public void TutorialPanelOn(int panel)
     {
       
-               
-                for (int i = 0; i < panels.Length; i++)
+          for (int i = 0; i < panels.Length; i++)
                 {
                     if (i == panel)
                     {

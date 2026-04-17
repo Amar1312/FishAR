@@ -33,10 +33,14 @@ public class FishDetailPanel : MonoBehaviour
         if (user.fishFullSaveData.unlockedFishIDs.Contains(_fishId))
         {
             _addToCollectBtn.gameObject.SetActive(false);
+            _fishModel.SetActive(true);
+            _fishImage.gameObject.SetActive(false);
         }
         else
         {
             _addToCollectBtn.gameObject.SetActive(true);
+            _fishModel.SetActive(false);
+            _fishImage.gameObject.SetActive(true);
         }
 
         _unlockPointText.text = _fishUnlockPoint.ToString();
@@ -118,7 +122,14 @@ public class FishDetailPanel : MonoBehaviour
 
     void AddToCollectBtnClick()
     {
+
         HomeSceneManager.Instance._unlockScript.gameObject.SetActive(true);
+        Invoke("EnableModal",2f);
+    }
+    void EnableModal()
+    {
+        _fishModel.SetActive(true);
+        _fishImage.gameObject.SetActive(false);
     }
 
     void AquariumBtnClick()

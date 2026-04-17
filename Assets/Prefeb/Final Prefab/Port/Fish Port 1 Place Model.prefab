@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5350710943046868368}
-  - component: {fileID: 4564107653753909897}
+  - component: {fileID: 1822695111391016315}
   m_Layer: 0
   m_Name: Fish Port 1 Place Model
   m_TagString: Container
@@ -33,14 +33,14 @@ Transform:
   - {fileID: 8378740438065855973}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4564107653753909897
+--- !u!114 &1822695111391016315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3728283178957821420}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2d2d856517f6194f9641e55114b606d, type: 3}
   m_Name: 

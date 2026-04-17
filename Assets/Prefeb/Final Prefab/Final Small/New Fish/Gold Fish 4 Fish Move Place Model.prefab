@@ -181,6 +181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water_Splash_B
       objectReference: {fileID: 0}
+    - target: {fileID: 3323387954473017891, guid: 0b912e9003fba894faa88cf964a6fb8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5968734593309141945, guid: 0b912e9003fba894faa88cf964a6fb8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3

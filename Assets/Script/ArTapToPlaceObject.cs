@@ -16,13 +16,12 @@ public class ArTapToPlaceObject : MonoBehaviour
     private ARSessionOrigin arOrigin;
     private ARRaycastManager arRaycastManager;
     public ARPointCloudManager cloudPoints;
-    private bool placementPoseIsValid = false;
+    public bool placementPoseIsValid = false;
 
     public GameObject objectToPlace;
     [HideInInspector]
     public Pose placementPose;
     public GameObject Base;
-    [HideInInspector]
     public bool HideObject;
 
     [Space]
@@ -38,6 +37,8 @@ public class ArTapToPlaceObject : MonoBehaviour
     public Button _placeButton;
     public GameObject _scanmsg;
     public GameObject _scrollObj;
+    bool hittingwater = false;
+    public LayerMask  targetLayer;
     //public GameObject _gamePanel;
     //public ARCanvas _arCanvas;
 
@@ -119,16 +120,18 @@ public class ArTapToPlaceObject : MonoBehaviour
             _parentObject.SetActive(true);
             //InstObj = Instantiate(objectToPlace, placementPose.position, placementPose.rotation, _parentObject.transform);
             //InstObj.transform.localEulerAngles = new Vector3(InstObj.transform.localEulerAngles.x, InstObj.transform.localEulerAngles.y + 180, InstObj.transform.localEulerAngles.z);
-            HideObject = true;
+           // HideObject = true;
             Debug.Log("Place Object in Scann");
             // UiManager.Instance.desktopscale = InstObj.transform.localScale.x;
             //StartCoroutine(IenumAnimation());
 
-            if(_parentObject.TryGetComponent<FishPlaceModel>(out FishPlaceModel fish1))
+            if (_parentObject.TryGetComponent<FishPlaceModel>(out FishPlaceModel fish1))
             {
                 fish1.AddPoint();
             }
 
+           placementPoseIsValid = false;
+            _placeButton.gameObject.SetActive(false);
             _scrollObj.SetActive(true);
             Invoke(nameof(OffObj), 0.5f);
         }
@@ -192,19 +195,60 @@ public class ArTapToPlaceObject : MonoBehaviour
 
     private void UpdatePlacementPose()
     {
+
+
+
         var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f, 0));
-        var hits = new List<ARRaycastHit>();
 
-        arRaycastManager.Raycast(screenCenter, hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes);
 
-        placementPoseIsValid = hits.Count > 0;
-        if (placementPoseIsValid)
+        // for custom collider detection 
+        Ray ray = Camera.main.ScreenPointToRay(screenCenter);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, targetLayer))
         {
-            placementPose = hits[0].pose;
+            Debug.Log("Raycast hit: " + hit.collider.name);
+            if (hit.collider.CompareTag("Water"))
+            {
+                placementPoseIsValid = true;
+                hittingwater = true;
+                placementPose.position = hit.point;
+                var cameraForward = Camera.current.transform.forward;
+                var cameraBearing = new Vector3(cameraForward.x, 0, cameraForward.z).normalized;
+                placementPose.rotation = Quaternion.LookRotation(cameraBearing);
+            }
+            else
+            {
+      
+            }
 
-            var cameraForward = Camera.current.transform.forward;
-            var cameraBearing = new Vector3(cameraForward.x, 0, cameraForward.z).normalized;
-            placementPose.rotation = Quaternion.LookRotation(cameraBearing);
+            Debug.Log("Hit Collider: " + hit.collider.name);
+        }
+        else
+        {
+            placementPoseIsValid = false;
+            hittingwater = false;
+        }
+
+
+
+        if (hittingwater == false)
+        {
+            var hits = new List<ARRaycastHit>();
+
+            arRaycastManager.Raycast(screenCenter, hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes);
+
+
+
+            placementPoseIsValid = hits.Count > 0;
+            if (placementPoseIsValid && hittingwater == false)
+            {
+                placementPose = hits[0].pose;
+
+                var cameraForward = Camera.current.transform.forward;
+                var cameraBearing = new Vector3(cameraForward.x, 0, cameraForward.z).normalized;
+                placementPose.rotation = Quaternion.LookRotation(cameraBearing);
+            }
         }
     }
 

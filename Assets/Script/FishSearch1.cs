@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class FishSearch1 : MonoBehaviour
 {
-    public Button _allSpeciesBtn, _koiFish, _fGoldFish, _goldFish, _normalFish, _likeBtn;
+    public Button _allSpeciesBtn, _koiFish, _fGoldFish, _goldFish, _normalFish, _likeBtn,_container;
     public List<GameObject> _selectBtnImage;
 
 
@@ -26,7 +26,7 @@ public class FishSearch1 : MonoBehaviour
         _fGoldFish.onClick.AddListener(FGoldFishClick);
         _goldFish.onClick.AddListener(GoldFishClick);
         _normalFish.onClick.AddListener(NormalFish);
-
+        _container.onClick.AddListener(ContainerClick);
         _likeBtn.onClick.AddListener(LikeBtnClick);
         namesList = UIManager.Instance._allPointFish;
 
@@ -52,7 +52,12 @@ public class FishSearch1 : MonoBehaviour
         OnTagFish("KoiFish");
         OnSelectImage(1);
     }
-
+    void ContainerClick()
+    {
+        Debug.Log("Container Clicked");
+        OnTagFish("Container");
+        OnSelectImage(5);
+    }
     void FGoldFishClick()
     {
         Debug.Log("FGoldFish Clicked");
@@ -102,7 +107,7 @@ public class FishSearch1 : MonoBehaviour
     void LikeBtnClick()
     {
         Debug.Log("LikeBtn Clicked");
-        OnSelectImage(5);
+        OnSelectImage(6);
         for (int i = 0; i < UIManager.Instance._allPointFish.Count; i++)
         {
 

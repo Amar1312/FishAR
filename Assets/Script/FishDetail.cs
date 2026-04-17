@@ -16,7 +16,7 @@ public class FishDetail : MonoBehaviour
     public int _fishID;
     public int _fishUnlockPoint;
     public TextMeshProUGUI _fishName;
-    public Image _fishImage;
+    public Image _fishImage,_fishLockImage;
     public List<GameObject> temp = new List<GameObject>();
 
     private void OnEnable()
@@ -53,6 +53,8 @@ public class FishDetail : MonoBehaviour
 
         _fishName.text = _fishDetail.fishName;
         _fishImage.sprite = _fishDetail.fishImage;
+        _fishLockImage.sprite = _fishDetail.fishImage;
+        
         for (int i = 0;i<temp.Count;i++)
         {
             Debug.Log(temp[i].gameObject.name);

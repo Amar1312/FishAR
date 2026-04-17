@@ -31,7 +31,7 @@ public class PointManager : Singleton<PointManager>
         }
         else
         {
-                PlayerPrefs.SetInt("OpenAppTime", 1);
+             PlayerPrefs.SetInt("OpenAppTime", 1);
             Debug.Log("First time opening app, setting OpenAppTime to 1" + PlayerPrefs.GetInt("OpenAppTime"));
         }
 

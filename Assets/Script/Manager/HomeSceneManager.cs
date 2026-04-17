@@ -33,7 +33,7 @@ public class HomeSceneManager : MonoBehaviour
 
     public Transform _collectionContainer;
     public CollectionFishComponent _collectionPanelPrefab;
-    public GameObject tutorialPanel;
+    public GameObject tutorialPanel,backgroudTutorial;
     public GameObject[] panels; 
 
 
@@ -149,9 +149,7 @@ public class HomeSceneManager : MonoBehaviour
     }
     public void TutorialPanelOn(int panel)
     {
-      
-               
-                for(int i = 0; i < panels.Length; i++)
+               for(int i = 0; i < panels.Length; i++)
                 {
                     if(i == panel)
                     {
@@ -162,9 +160,6 @@ public class HomeSceneManager : MonoBehaviour
                         panels[i].SetActive(false);
                     }
                 }
-
-
-       
 
     }
     public void TutorialPanelOff(int i) {  
